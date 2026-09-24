@@ -2,6 +2,8 @@
 A/B/C are the same deterministic runs already in run_log.jsonl, re-run to extract details)."""
 import json
 import logging
+import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -9,9 +11,14 @@ import pandas as pd
 from alpha_finder.backtest.metrics import max_drawdown, monthly_returns
 from alpha_finder.data.prices import load_prices
 from alpha_finder.reporting.plots import drawdown_chart, growth_chart, ladder_chart
-from alpha_finder.research import (
-    DEV_END, REPORT_DIR, Market, benchmark_config, run_pair, to_jsonable, variants,
-)
+from alpha_finder.research import DEV_END, Market, benchmark_config, run_pair, to_jsonable
+
+# Version 1's own modules sit next to this file.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ranks import momentum_ranks  # noqa: E402
+from variants import variants  # noqa: E402
+
+RESULTS = Path(__file__).resolve().parent / "results"
 
 logging.basicConfig(level=logging.ERROR)
 
@@ -22,7 +29,7 @@ def cagr_monthly(s):
 
 def main():
     m = Market.load()
-    ranks = m.ranks(12, 1)
+    ranks = momentum_ranks(m, 12, 1)
     bench_after, bench_pre = run_pair(m, benchmark_config(), ranks, None, DEV_END)
     runs = {k: run_pair(m, cfg, ranks, None, DEV_END) for k, cfg in variants().items()}
 
@@ -64,10 +71,10 @@ def main():
         }
     ref["qqq"] = {"final_after_tax": bench_after.final_after_tax, "max_dd_pre_tax": max_drawdown(bench_pre.equity),
                   "liquidation_tax": bench_after.liquidation_tax, "tax_paid_to_date": bench_after.tax_paid}
-    (REPORT_DIR / "results_dev_reference.json").write_text(json.dumps(to_jsonable(ref), indent=1, default=float))
+    (RESULTS / "results_dev_reference.json").write_text(json.dumps(to_jsonable(ref), indent=1, default=float))
     print(json.dumps(to_jsonable(ref), indent=1, default=float))
 
-    fig = REPORT_DIR / "figures"
+    fig = RESULTS / "figures"
     curves = {"QQQ": bench_after.equity, **{k: runs[k][0].equity for k in "ABC"}}
     growth_chart(curves, str(fig / "growth_dev.png"),
                  "Growth of $1M, development period (Feb 2011 to Dec 2019)",

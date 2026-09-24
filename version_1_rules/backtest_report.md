@@ -1,5 +1,7 @@
 # Backtest report: version 1 (momentum on the S&P 500, after tax, vs QQQ)
 
+*Part of [version_1_rules](README.md). Project overview: [../README.md](../README.md).*
+
 Written 2026-09-24. Covers the **development period only** (Feb 2011 to Dec 2019). The 2020-onward
 holdout has deliberately **not** been run (see [Holdout](#holdout-not-run-on-purpose)).
 
@@ -71,7 +73,7 @@ period*. That is **B**, though the three are within noise of each other (see bel
 | Total tax (paid + due on sale) | $709k | $407k | **$305k** | $268k |
 | Average holdings | | 24.6 | **24.3** | 24.1 |
 
-![Growth of $1M](figures/growth_dev.png)
+![Growth of $1M](results/figures/growth_dev.png)
 
 The chart shows account value after each year's tax has been paid, with unrealized gains still
 untaxed. QQQ finishes at $4.04M here but $3.37M once its deferred tax is counted, which is why the
@@ -82,7 +84,7 @@ portfolios run through the same engine differ from one another by up to 2.8 poin
 runs below), so gaps that small are noise. The only reliable statement in this table is the size of the
 gap to QQQ.
 
-![Where the gap comes from](figures/cagr_ladder_dev.png)
+![Where the gap comes from](results/figures/cagr_ladder_dev.png)
 
 ### Where the gap to QQQ comes from
 
@@ -127,7 +129,7 @@ did not lower the effective tax rate further (23.2% vs 23.0%), and its pre-tax r
 by an amount inside the noise. Under the plan's own rule ("if C does not clearly beat B, simplify"),
 **the tax gate goes**: no benefit was shown, and it adds complexity.
 
-![Drawdowns](figures/drawdown_dev.png)
+![Drawdowns](results/figures/drawdown_dev.png)
 
 ## Signal quality
 
@@ -172,7 +174,7 @@ and I am not adopting them, because picking the least-bad of eight variants afte
 how false discoveries are made.
 
 **Trials logged so far: 17** (3 variants, 8 sensitivity runs, 5 shuffled, 1 lag test), in
-[`run_log.jsonl`](run_log.jsonl).
+[`run_log.jsonl`](results/run_log.jsonl).
 
 ## Success criteria verdict (finalist B)
 
@@ -301,12 +303,12 @@ tells us whether momentum has anything to work with.
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt && pip install -e .
 python -m pytest                          # 42 tests
-python scripts/fetch_universe_prices.py   # downloads ~800 tickers into data_cache/ (about 1 minute)
-python scripts/run_dev.py                 # development-period runs (logged once each in reports/run_log.jsonl)
-python scripts/make_dev_assets.py         # reference numbers and figures
+python scripts/fetch_universe_prices.py   # downloads ~800 tickers into data/prices/ (about 1 minute)
+python version_1_rules/run_dev.py         # development-period runs (logged once each in version_1_rules/results/run_log.jsonl)
+python version_1_rules/make_dev_assets.py # reference numbers and figures
 ```
 
-The index snapshot used is in [`snapshots/`](../snapshots/) (pulled 2026-09-24), so the universe does not
+The index snapshot used is in [`data/universe/`](../data/universe/) (pulled 2026-09-24), so the universe does not
 change if Wikipedia does. Prices are re-downloaded from Yahoo and may drift slightly over time. Re-running
 is safe: a trial that is already in the run log is not logged twice, so the count of 17 stays accurate.
 

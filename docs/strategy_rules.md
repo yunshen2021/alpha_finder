@@ -4,6 +4,11 @@ Status: **draft for review**. Nothing here has been backtested yet. Every thresh
 starting hypothesis that the backtest is allowed to reject. Update this file when a rule
 changes, and note why.
 
+> **How this file is organized.** It is the project-wide rulebook: goal, constraints, tax assumptions, success
+> criteria, validation discipline and failure modes (sections 1-5 and 10-16) apply to **every** version.
+> Sections 6-9 (selection, portfolio, buy and sell rules) are **version 1's** rules; later versions keep their own
+> rules in their own folder (`version_2_ml/`, ...). Version folders: see the [project README](../README.md).
+
 ## 1. Goal
 
 Build a research pipeline that answers one question:
@@ -211,7 +216,7 @@ Then:
 
 ## 14. Build order
 
-1. Data layer: yfinance with parquet caching in `data_cache/`, data quality report, QQQ benchmark.
+1. Data layer: yfinance with parquet caching in `data/prices/`, data quality report, QQQ benchmark.
 2. Tax-lot accounting and the after-tax comparison against buy-and-hold QQQ.
 3. Universe reconstruction (point-in-time S&P 500).
 4. Signals: momentum first, then low-vol, then quality.
@@ -234,7 +239,7 @@ Then:
 ## 17. Implementation status (2026-09-24)
 
 Version 1 is built and evaluated on the development period only. Results and the full write-up are
-in [`reports/backtest_report.md`](../reports/backtest_report.md). Verdict: **it does not beat QQQ**
+in [`version_1_rules/backtest_report.md`](../version_1_rules/backtest_report.md). Verdict: **it does not beat QQQ**
 (fails success criteria 1, 2 and 3), so per section 3 the reading is "buy QQQ" for this version.
 
 What was built: cached price loader, QQQ benchmark, data quality report, point-in-time S&P 500

@@ -1,20 +1,27 @@
-"""Development stage (2011-2019 only): signal check, A/B/C comparison, robustness, sanity tests.
+"""Version 1, development stage (2011-2019 only): signal check, A/B/C comparison, robustness, sanity tests.
 
 The holdout period (2020 onward) is deliberately NOT touched here. Fill dates stop at
 2019-12-31, and the finalist is picked by a rule fixed in advance (see pick_finalist).
 """
 import json
 import logging
+import sys
+from pathlib import Path
 from dataclasses import replace
 
 import pandas as pd
 
 from alpha_finder.backtest.metrics import summarize
-from alpha_finder.research import (
-    DEV_END, REPORT_DIR, TAX, Market, benchmark_config, log_run, run_pair, to_jsonable, variants,
-)
+from alpha_finder.research import DEV_END, Market, benchmark_config, log_run, run_pair, to_jsonable
 from alpha_finder.signals.evaluate import signal_diagnostics, summarize_diagnostics
 from alpha_finder.signals.momentum import shuffle_ranks
+
+# Version 1's own modules sit next to this file.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ranks import momentum_ranks  # noqa: E402
+from variants import variants  # noqa: E402
+
+RESULTS = Path(__file__).resolve().parent / "results"
 
 logging.basicConfig(level=logging.ERROR)
 pd.set_option("display.width", 220)
@@ -31,7 +38,7 @@ def evaluate(market, cfg, ranks, bench_cache, key, stage, name, extra=None):
     bench_after, bench_pre = bench_cache[key]
     after, pre = run_pair(market, cfg, ranks, None, DEV_END)
     row = summarize(name, after, pre, bench_after, bench_pre)
-    log_run(stage, name, cfg, None, DEV_END, row, extra)
+    log_run(RESULTS / "run_log.jsonl", stage, name, cfg, None, DEV_END, row, extra)
     return row, after, pre
 
 
@@ -41,13 +48,13 @@ def pick_finalist(rows: dict[str, dict]) -> str:
 
 
 def main():
-    REPORT_DIR.mkdir(exist_ok=True)
-    (REPORT_DIR / "data").mkdir(exist_ok=True)
+    RESULTS.mkdir(exist_ok=True)
+    (RESULTS / "data").mkdir(exist_ok=True)
     market = Market.load()
-    ranks = market.ranks(12, 1)
+    ranks = momentum_ranks(market, 12, 1)
     dev_dates = [d for d in ranks if d <= DEV_END]
 
-    cov = market.coverage()
+    cov = market.coverage(ranks)
     dev_cov = cov.loc[(cov.index >= dev_dates[0]) & (cov.index <= DEV_END)]
     coverage = {
         "first_signal": str(dev_dates[0].date()),
@@ -81,7 +88,7 @@ def main():
     bench_after, bench_pre = bench_cache[(12, 1)]
     finalist = pick_finalist(rows)
     print("\nFINALIST (pre-registered rule: best dev after-tax CAGR):", finalist)
-    (REPORT_DIR / "finalist.json").write_text(json.dumps({"finalist": finalist, "dev_end": str(DEV_END.date())}))
+    (RESULTS / "finalist.json").write_text(json.dumps({"finalist": finalist, "dev_end": str(DEV_END.date())}))
 
     # --- robustness: one parameter at a time around variant C (logged; not used to re-tune) ---
     base = variants()["C"]
@@ -97,7 +104,7 @@ def main():
     }
     neigh_rows = {}
     for label, (cfg, (lb, sk)) in neigh.items():
-        r = market.ranks(lb, sk)
+        r = momentum_ranks(market, lb, sk)
         row, _, _ = evaluate(market, replace(cfg, name=f"C {label}"), r, bench_cache, (lb, sk), "dev-neighborhood", f"C {label}")
         neigh_rows[label] = row
         print(f"  {label:14s} after-tax excess {pct(row['excess_after_tax'])}  pre-tax excess {pct(row['excess_pre_tax'])}  "
@@ -122,15 +129,15 @@ def main():
         "neighborhood": neigh_rows, "shuffled": shuffled, "lag": lag_row,
         "bench": {"after_tax_cagr": rows["A"]["bench_after_tax_cagr"], "max_dd": rows["A"]["bench_max_dd"]},
     }
-    (REPORT_DIR / "results_dev.json").write_text(json.dumps(to_jsonable(out), indent=1, default=float))
+    (RESULTS / "results_dev.json").write_text(json.dumps(to_jsonable(out), indent=1, default=float))
     eq = pd.DataFrame({
         "QQQ_after_tax": bench_after.equity, "QQQ_pre_tax": bench_pre.equity,
         **{f"{k}_after_tax": v[0] for k, v in curves.items()},
         **{f"{k}_pre_tax": v[1] for k, v in curves.items()},
     })
-    eq.to_csv(REPORT_DIR / "data" / "equity_dev.csv")
-    diag.to_csv(REPORT_DIR / "data" / "signal_diagnostics_dev.csv")
-    cov.to_csv(REPORT_DIR / "data" / "coverage.csv")
+    eq.to_csv(RESULTS / "data" / "equity_dev.csv")
+    diag.to_csv(RESULTS / "data" / "signal_diagnostics_dev.csv")
+    cov.to_csv(RESULTS / "data" / "coverage.csv")
 
 
 if __name__ == "__main__":

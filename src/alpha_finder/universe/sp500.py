@@ -20,9 +20,9 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from alpha_finder.config import PROJECT_ROOT
+from alpha_finder.config import UNIVERSE_DIR
 
-SNAPSHOT_DIR = PROJECT_ROOT / "snapshots"
+SNAPSHOT_DIR = UNIVERSE_DIR
 CURRENT_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 CHANGES_URL = "https://en.wikipedia.org/wiki/Historical_components_of_the_S%26P_500"
 _HEADERS = {"User-Agent": "alpha-finder-research/0.1 (personal research project)"}

@@ -1,6 +1,6 @@
 """Daily price loading with a per-ticker parquet cache.
 
-Each ticker is stored as data_cache/prices/<TICKER>.parquet plus a small JSON
+Each ticker is stored as data/prices/<TICKER>.parquet plus a small JSON
 sidecar recording the date range that was requested. A cache hit requires the
 cached request to cover the new one, so results are deterministic for a given
 (start, end) and old runs can be reproduced by passing an explicit end date.

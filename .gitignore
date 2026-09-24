@@ -2,8 +2,10 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
-data_cache/*
-!data_cache/.gitkeep
+# Downloaded prices stay local (large, re-downloadable). The small index snapshots in data/universe/ are tracked.
+data/*
+!data/universe/
+!data/README.md
 *.egg-info/
 .pytest_cache/
 .ipynb_checkpoints/
