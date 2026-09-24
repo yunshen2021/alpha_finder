@@ -14,6 +14,7 @@ plans: $1,000 every week, and $1,000 a week in 2020 rising 15% a year. Pure calc
 | `fetch_holdings.py` | Downloads each fund's quarterly holdings from SEC N-PORT filings (2019-2025) and maps them to tickers |
 | `run.py` | Runs the audits, then every portfolio, scenario and period; writes `results/` |
 | `make_report.py` | Builds the charts and tables used in the report from `results/` |
+| `current_top.py` | Today's top N of QQQ and VGT and how a weekly amount splits between them (latest SEC filing, weights moved by price to the last close) |
 | `report.md` | The write-up |
 | `results/results.json` | Every computed number |
 | `results/tables.md` | All result tables |
@@ -33,4 +34,5 @@ export SEC_USER_AGENT="Your Name your.email@example.com"   # the SEC's rule for 
 python version_3_etf_topn/fetch_holdings.py                # about 10 minutes the first time
 python version_3_etf_topn/run.py                           # audits, then all runs
 python version_3_etf_topn/make_report.py                   # charts and tables
+python version_3_etf_topn/current_top.py --qqq 10 --vgt 5 --amount 1000   # this week's lists
 ```
