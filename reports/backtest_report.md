@@ -234,9 +234,15 @@ cost is that the holdout will then be spent for anything built on momentum.
 
 1. **Survivorship bias remains.** Yahoo has no price history for delisted, acquired or bankrupt names,
    so many former index members cannot be traded in the test. Coverage of the index at the start was
-   only **69% in 2011**, rising to 89% in 2019 and 99.5% today. Average over the dev period: 79%. The
-   missing names skew toward failures, so results are more likely flattering than harsh. I cannot
-   quantify by how much.
+   only **69% in 2011**, rising to 89% in 2019 and 99.5% today. Average over the dev period: 79%.
+   Of the 697 companies that were index members at any point in 2011-2019, 168 (24%) have no prices.
+   Checking Wikipedia's recorded reason for each removal: **74% were acquired or merged**, 21% were dropped
+   for size, and 5% are unclear. The size group is mixed: some later failed (Chesapeake, Frontier,
+   Windstream, RadioShack), and some are still trading under a new ticker that we did not map (for
+   example WLTW is now WTW), so part of the gap is recoverable. Acquired companies usually earn a takeover
+   premium before they disappear, so the direction of the bias is **not clearly flattering or harsh**. An
+   earlier draft said it skewed toward failures; that overstated it. What is certain is that the sample is
+   selected by what happened later, and I cannot quantify the effect on returns.
 
    | Year | Index members | With prices | Coverage |
    |---|---|---|---|
