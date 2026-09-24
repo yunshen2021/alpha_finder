@@ -9,13 +9,13 @@
   "tickers_with_prices": 636
  },
  "signal": {
-  "months": 108,
-  "mean_ic": 0.003730032251312171,
-  "ic_t": 0.18879918853565866,
-  "pct_positive_ic": 0.5092592592592593,
-  "q1_minus_q5_monthly": 0.0005423835794233772,
-  "topn_minus_universe_monthly": -0.0002794724710750314,
-  "topn_minus_universe_annual": -0.003348519531179539
+  "months": 107,
+  "mean_ic": 0.0014327779300774223,
+  "ic_t": 0.07233749169009503,
+  "pct_positive_ic": 0.5046728971962616,
+  "q1_minus_q5_monthly": 2.3066737299177904e-06,
+  "topn_minus_universe_monthly": -0.0004239124998740328,
+  "topn_minus_universe_annual": -0.0050751064223416575
  },
  "variants": {
   "A": {

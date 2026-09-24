@@ -17,12 +17,12 @@ any results ([`docs/strategy_rules.md`](../docs/strategy_rules.md), section 3), 
 
 Three findings matter more than the headline:
 
-1. **Momentum did nothing in this sample.** Its rank correlation with next month's return was 0.004
-   (t-stat 0.19), which is statistically zero. A momentum portfolio was indistinguishable from randomly
+1. **Momentum did nothing in this sample.** Its rank correlation with next month's return was 0.001
+   (t-stat 0.07), which is statistically zero. A momentum portfolio was indistinguishable from randomly
    chosen stocks: 5 random-score portfolios, run with the same rules as variant C, lost 5.6 to 8.4 points
    a year to QQQ after tax, against 7.6 for C driven by momentum.
 2. **Most of the gap is the universe, not the rules.** From 2011 to 2019 the S&P 500 itself returned
-   about 13.0% a year and QQQ about 17.2%. Any strategy picking S&P 500 stocks starts about 4 points a
+   about 13.1% a year and QQQ about 17.2%. Any strategy picking S&P 500 stocks starts about 4 points a
    year behind QQQ before it does anything wrong. To *beat* QQQ it would need roughly 4+ points of
    genuine pre-tax alpha, which is a very high bar.
 3. **Taxes are not the problem, pre-tax return is.** Variant B lost 2.3 points a year to tax, less than
@@ -86,23 +86,23 @@ gap to QQQ.
 
 ### Where the gap to QQQ comes from
 
-Pre-tax annual returns over the same 108 months:
+Pre-tax annual returns over the same 107 months:
 
 | Step | Return | What it tells us |
 |---|---|---|
 | QQQ | 17.2% | The benchmark |
-| S&P 500 index (SPY) | 13.0% | The universe alone costs about 4 points |
-| Equal-weight S&P names we could price | 13.4% | Consistent with the index (this set is survivor-only, see limits) |
-| Top 25 by momentum, monthly, no costs or taxes | 12.5% | Momentum picks were slightly *worse* than the average name |
-| Variant B, in the engine, with costs | 9.9% | About 2.6 points lost to costs, cash and rules |
+| S&P 500 index (SPY) | 13.1% | The universe alone costs about 4 points |
+| Equal-weight S&P names we could price | 13.7% | Consistent with the index (this set is survivor-only, see limits) |
+| Top 25 by momentum, monthly, no costs or taxes | 12.6% | Momentum picks were slightly *worse* than the average name |
+| Variant B, in the engine, with costs | 9.9% | About 2.7 points lost to costs, cash and rules |
 
 Costs are only part of that last step. Measured directly, with taxes off:
 
 | | Idealized top-25 (monthly, no frictions) | Engine, zero costs | Engine, 10 bps costs |
 |---|---|---|---|
-| A | 12.5% | 11.4% | 10.6% (costs: -0.9) |
-| B | 12.5% | 10.3% | 9.9% (costs: -0.3) |
-| C | 12.5% | 9.9% | 9.0% (costs: -0.9) |
+| A | 12.6% | 11.4% | 10.6% (costs: -0.9) |
+| B | 12.6% | 10.3% | 9.9% (costs: -0.3) |
+| C | 12.6% | 9.9% | 9.0% (costs: -0.9) |
 
 The engine differs from the idealized reference through idle cash, sector caps, filling at the next
 open, and (for B and C) the buffer and position-cap rules, which change which stocks are held. Because
@@ -110,7 +110,7 @@ the signal has no edge, those differences add variance instead of a systematic g
 +/-1 to 3 points between any two 25-stock portfolios over nine years. The variation in the cost column
 (B -0.3 versus C -0.9 at nearly identical turnover) is the same noise. It is worth tightening in
 version 2, but it is not the main story: even with zero friction the idealized strategy sits about 5
-points behind QQQ.
+points behind QQQ (12.6% vs 17.4%).
 
 ### Taxes
 
@@ -131,15 +131,15 @@ by an amount inside the noise. Under the plan's own rule ("if C does not clearly
 
 ## Signal quality
 
-| Measure, 108 months | Value | Meaning |
+| Measure, 107 months | Value | Meaning |
 |---|---|---|
-| Average rank IC | 0.004 | Correlation between rank and next-month return. 0 = no predictive power; 0.02-0.05 would be useful |
-| t-stat | 0.19 | Far below 2, so indistinguishable from zero |
-| Months with positive IC | 50.9% | A coin flip |
-| Top fifth minus bottom fifth | +0.05% per month | Essentially no spread |
-| Top 25 minus average stock | -0.03% per month (-0.3% a year) | No edge |
+| Average rank IC | 0.001 | Correlation between rank and next-month return. 0 = no predictive power; 0.02-0.05 would be useful |
+| t-stat | 0.07 | Far below 2, so indistinguishable from zero |
+| Months with positive IC | 50.5% | A coin flip |
+| Top fifth minus bottom fifth | 0.00% per month | No spread at all |
+| Top 25 minus average stock | -0.04% per month (-0.5% a year) | No edge |
 
-This does not prove momentum never works. Momentum was famously weak in the 2010s, and 108 months is a
+This does not prove momentum never works. Momentum was famously weak in the 2010s, and 107 months is a
 small sample, so the estimate is noisy (our alpha ranges above span roughly +/-8 points). It does say
 that *on this data, with this universe*, there is no evidence to trade on.
 
@@ -150,11 +150,12 @@ that *on this data, with this universe*, there is no evidence to trade on.
 - **Random scores show no alpha.** 5 runs with shuffled ranks had pre-tax alpha t-stats between -0.05
   and -0.9. Nothing positive, as required.
 - **One extra day of delay barely matters** (-7.24 vs -7.56 for C), so there is no hidden look-ahead.
-- **Independent cross-check.** The engine's QQQ result (17.2%) is within 0.4 points of a frictionless
-  month-end calculation (17.6%); the difference is the start date and open-versus-close timing. Variant A with zero friction lands
+- **Independent cross-check.** The engine's QQQ result (17.2%) is within 0.2 points of a frictionless
+  month-end calculation over the same 107 months (17.4%); the remainder is start day and open-versus-close timing. Variant A with zero friction lands
   about 1 point below the frictionless top-25 series, for the reasons above.
-- **40 automated tests**, including hand-calculated tax cases (short vs long term, loss carryforward,
-  wash sale, delisting, position cap, next-open fills, no future data in signals).
+- **42 automated tests**, including hand-calculated tax cases (short vs long term, loss carryforward,
+  wash sale, delisting, position cap, next-open fills, no future data in signals) and two tests that
+  scramble all prices after the development period and require every development-period number to stay identical.
 
 **Parameter sensitivity** (variant C, one change at a time; these are checks, not re-tuning):
 
@@ -183,6 +184,41 @@ how false discoveries are made.
 | 4 | Advantage holds out of sample | Not run; both dev sub-periods negative (2011-13: -5.2, 2014-19: -10.6) | Not tested |
 
 Reading from the rules file: fails 1 and 2 means **buy QQQ**.
+
+## Did any post-2019 data touch the development results?
+
+Short answer: **no test or tuning used it, and the holdout has not been run.** Because it matters this
+much, here is the audit in detail.
+
+**Clean:**
+
+- All 17 logged trials and every equity curve end on **2019-12-31**. Fill dates stop there.
+- The signal at each date uses only earlier prices (a test checks this), and orders fill at the next open.
+- Every choice (S&P 500, momentum, 25 holdings, rank 60, 10 bps, the finalist rule) was written in the
+  rules file *before* any backtest ran. Sensitivity runs were not used to re-tune anything.
+- Two automated tests scramble every price after the development period and require the diagnostics and
+  a full backtest to be identical.
+
+**A leak I found and fixed while checking this:** an earlier draft of this report used one month of 2020
+data. The signal dated 2019-12-31 has a "next month" return that is January 2020, and it was included in the
+signal-quality statistics and in the reference series (SPY, equal-weight universe, frictionless top-25).
+The backtests themselves were never affected. After the fix, the IC dropped from 0.004 to 0.001, and SPY
+and the two universe references moved by 0.1 to 0.3 points; no conclusion changed. The tests above were
+added so it cannot recur.
+
+**Later information that legitimately, but imperfectly, enters the development period:**
+
+- **Which companies exist to trade.** We can only trade names Yahoo still has prices for, which depends on
+  what happened after 2019 (a company that failed in 2022 is missing). This is the survivorship bias in
+  the limits below.
+- **The index history.** Membership on each historical date is rebuilt from today's list plus the record
+  of changes. That is information we would have had by looking back, but it is not what a trader at the time
+  could see.
+- **Sector labels** are today's, as noted below.
+- **Price adjustments** are as of today (dividend and split adjusted). Returns and ratios are unaffected.
+- **My own knowledge of market history** shaped what I proposed to test. I have not fitted anything
+  to post-2019 results, but I cannot claim to have zero prior knowledge, which is another reason to keep
+  a clean holdout.
 
 ## Holdout: not run, on purpose
 
@@ -221,7 +257,7 @@ cost is that the holdout will then be spent for anything built on momentum.
 5. **Tax model is simplified**: flat rates, all dividends treated as qualified, NIIT off, MA rate of 3%
    taken from you and not verified, wash sales only checked for repurchases *after* a loss sale, the
    $3,000 loss deduction ignored, tax paid from the portfolio each December.
-6. **Small sample.** 108 monthly observations. The alpha confidence ranges are about 16 points wide, so a
+6. **Small sample.** 107 monthly observations. The alpha confidence ranges are about 16 points wide, so a
    real edge of a couple of points could not be detected, and neither could a small negative one.
 7. **Prices are not cross-verified** against a second data vendor. I spot-checked splits (AAPL) and
    investigated one flagged jump (AAL, a real event on 2020-06-04).
@@ -258,15 +294,15 @@ tells us whether momentum has anything to work with.
 ```bash
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt && pip install -e .
-python -m pytest                          # 40 tests
+python -m pytest                          # 42 tests
 python scripts/fetch_universe_prices.py   # downloads ~800 tickers into data_cache/ (about 1 minute)
-python scripts/run_dev.py                 # development-period runs (appends to reports/run_log.jsonl)
+python scripts/run_dev.py                 # development-period runs (logged once each in reports/run_log.jsonl)
 python scripts/make_dev_assets.py         # reference numbers and figures
 ```
 
 The index snapshot used is in [`snapshots/`](../snapshots/) (pulled 2026-09-24), so the universe does not
 change if Wikipedia does. Prices are re-downloaded from Yahoo and may drift slightly over time. Re-running
-`run_dev.py` appends duplicate rows to the run log, so the "17 trials" count refers to the first run.
+is safe: a trial that is already in the run log is not logged twice, so the count of 17 stays accurate.
 
 ## Terms
 

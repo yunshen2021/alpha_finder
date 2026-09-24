@@ -31,7 +31,7 @@ def main():
     ew, top25 = {}, {}
     for j in range(len(m.month_ends) - 1):
         d, nxt = m.month_ends[j], m.month_ends[j + 1]
-        if d not in ranks or d > DEV_END:
+        if d not in ranks or nxt > DEV_END:  # forward window must end inside the dev period
             continue
         r = ranks[d]
         fwd = (px.loc[nxt, r.index] / px.loc[d, r.index] - 1).dropna()

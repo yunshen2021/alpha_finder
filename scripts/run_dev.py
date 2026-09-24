@@ -60,7 +60,7 @@ def main():
     }
     print("COVERAGE", json.dumps(coverage, indent=1))
 
-    diag = signal_diagnostics({d: ranks[d] for d in dev_dates}, market.adj, market.month_ends)
+    diag = signal_diagnostics({d: ranks[d] for d in dev_dates}, market.adj, market.month_ends, end=DEV_END)
     diag_summary = summarize_diagnostics(diag)
     print("SIGNAL (dev)", json.dumps(diag_summary, indent=1))
 

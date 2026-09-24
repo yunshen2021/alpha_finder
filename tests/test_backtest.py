@@ -248,3 +248,51 @@ def test_rank_universe_respects_membership():
     scores = pd.DataFrame({"A": [0.3], "B": [0.5], "C": [0.1]}, index=dates)
     ranks = rank_universe(scores, lambda d: {"A", "C"})
     assert ranks[dates[0]].to_dict() == {"A": 1.0, "C": 2.0}
+
+
+# --- development / holdout separation -----------------------------------
+
+def _random_market(n_days=700, n_tickers=60, seed=3, tweak_after=None):
+    """Random prices; optionally scramble everything after index `tweak_after`."""
+    rng = np.random.default_rng(seed)
+    paths = {f"T{i:02d}": 100 * np.cumprod(1 + rng.normal(0.0004, 0.015, n_days))
+             for i in range(n_tickers)}
+    if tweak_after is not None:
+        for t in paths:
+            paths[t] = paths[t].copy()
+            paths[t][tweak_after + 1:] *= rng.uniform(0.2, 5.0)  # wildly different future
+    return make_prices(paths)
+
+
+def test_signal_diagnostics_ignore_data_after_end():
+    from alpha_finder.signals.evaluate import signal_diagnostics
+
+    cut = 600
+    out = []
+    for tweak in (None, cut):
+        prices, idx = _random_market(tweak_after=tweak)
+        adj = pd.DataFrame({t: df["adj_close"] for t, df in prices.items()})
+        dates = month_end_dates(idx)
+        ranks = rank_universe(momentum_scores(adj, dates), lambda d: set(adj.columns))
+        out.append(signal_diagnostics(ranks, adj, dates, end=idx[cut]))
+    pd.testing.assert_frame_equal(out[0], out[1])
+    assert out[0].index.max() < month_end_dates(idx)[month_end_dates(idx) <= idx[cut]][-1]
+
+
+def test_backtest_ignores_prices_after_end():
+    cut = 600
+    results = []
+    for tweak in (None, cut):
+        prices, idx = _random_market(tweak_after=tweak)
+        adj = pd.DataFrame({t: df["adj_close"] for t, df in prices.items()})
+        dates = month_end_dates(idx)
+        ranks = rank_universe(momentum_scores(adj, dates), lambda d: set(adj.columns))
+        panels = build_panels(prices, idx)
+        res = run_backtest(cfg(n_holdings=10, sell_rank=20, position_cap=0.2), panels, ranks, {},
+                           end=idx[cut])
+        bench = run_backtest(cfg(mode="buy_hold", n_holdings=1, benchmark_ticker="T00"), panels, ranks, {},
+                             end=idx[cut])
+        results.append((res, bench))
+    for a, b in zip(*results):
+        assert a.final_after_tax == pytest.approx(b.final_after_tax)
+        pd.testing.assert_series_equal(a.equity, b.equity)

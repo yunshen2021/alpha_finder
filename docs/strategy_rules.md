@@ -239,7 +239,7 @@ in [`reports/backtest_report.md`](../reports/backtest_report.md). Verdict: **it 
 
 What was built: cached price loader, QQQ benchmark, data quality report, point-in-time S&P 500
 universe, 12-1 momentum, lot-level tax engine with wash sales, variants A/B/C, alpha/beta and
-drawdown statistics, IC diagnostics, run log, shuffled-signal and lag sanity tests (40 tests).
+drawdown statistics, IC diagnostics, run log, shuffled-signal and lag sanity tests (42 tests).
 
 Deviations from this plan, and why:
 

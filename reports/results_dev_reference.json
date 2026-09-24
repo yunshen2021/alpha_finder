@@ -1,10 +1,10 @@
 {
  "qqq_pre_tax_engine": 0.1721163000587269,
  "qqq_after_tax": 0.14597477916353152,
- "spy_pre_tax": 0.1296191406545475,
- "ew_universe_survivor_only": 0.1335293289679398,
- "top25_frictionless": 0.12489681227845817,
- "months": 108,
+ "spy_pre_tax": 0.13095781088071878,
+ "ew_universe_survivor_only": 0.13675782853893415,
+ "top25_frictionless": 0.12608797204117694,
+ "months": 107,
  "window": [
   "2011-02-28",
   "2019-12-31"

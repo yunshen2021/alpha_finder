@@ -108,6 +108,13 @@ def log_run(stage: str, name: str, cfg: BacktestConfig, start, end, row: dict, e
         "after_tax_cagr": row["after_tax_cagr"], "bench_after_tax_cagr": row["bench_after_tax_cagr"],
         "excess_after_tax": row["excess_after_tax"], "extra": extra or {},
     }
+    key = (stage, name, json.dumps(params, sort_keys=True, default=float), entry["start"], entry["end"])
+    if RUN_LOG.exists():
+        for line in RUN_LOG.read_text().splitlines():
+            old = json.loads(line)
+            if (old["stage"], old["name"], json.dumps(old["params"], sort_keys=True, default=float),
+                    old["start"], old["end"]) == key:
+                return  # same trial already logged: re-running must not inflate the trial count
     with RUN_LOG.open("a") as f:
         f.write(json.dumps(entry, default=float) + "\n")
 

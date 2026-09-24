@@ -12,16 +12,19 @@ from scipy import stats
 
 
 def signal_diagnostics(ranks: dict[pd.Timestamp, pd.Series], adj_close: pd.DataFrame,
-                       month_ends: pd.DatetimeIndex, top_n: int = 25) -> pd.DataFrame:
+                       month_ends: pd.DatetimeIndex, top_n: int = 25,
+                       end: pd.Timestamp | None = None) -> pd.DataFrame:
     """Per signal date: rank IC, top-quintile minus bottom-quintile, top-N minus universe.
 
     Forward return runs from the signal month-end close to the next month-end close.
+    With `end`, signals whose forward window would finish after it are skipped, so no
+    data beyond the development period leaks into the diagnostics.
     """
     px = adj_close.ffill(limit=5).reindex(month_ends)
     rows = []
     for j in range(len(month_ends) - 1):
         d, nxt = month_ends[j], month_ends[j + 1]
-        if d not in ranks:
+        if d not in ranks or (end is not None and nxt > end):
             continue
         r = ranks[d]
         fwd = (px.loc[nxt, r.index] / px.loc[d, r.index] - 1).dropna()
