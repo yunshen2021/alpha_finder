@@ -110,6 +110,40 @@ The ranking is the same as with the flat plan.
 | VGT top 75 | $458,206 | $848,547 | +9.8% | +4.2% | 23.6% |
 | VGT all holdings, never sold | $458,206 | $835,040 | +8.1% | +2.5% | 23.0% |
 
+## Average annual returns
+
+With weekly buying, "average return" can mean two things, so both are shown:
+
+- **Your return (money-weighted):** the single yearly rate that turns your weekly deposits into the final value.
+  It counts *when* each dollar went in, like the "personal rate of return" a brokerage such as Fidelity shows.
+- **The strategy's return (time-weighted):** each day's deposit is removed, so the timing of your money does not
+  matter. This is how funds report performance. Check: for "All in QQQ" it equals QQQ's own total return exactly
+  (+194.5% over the period), and likewise for VGT.
+
+| Portfolio | 2020-2025, your return (money-weighted) | 2020-2025, strategy return (time-weighted) | 2024-2025, your return (money-weighted) | 2024-2025, strategy return (time-weighted) |
+|---|---:|---:|---:|---:|
+| QQQ top 10 | 26.6% | 25.6% | 33.6% | 35.8% |
+| VGT top 5 | 25.4% | 25.9% | 29.3% | 29.2% |
+| All in QQQ | 19.5% | 19.7% | 22.7% | 23.2% |
+| All in VGT | 21.5% | 21.2% | 25.5% | 25.5% |
+
+Calendar-year returns (time-weighted; 2020 starts on Jan 2):
+
+| Year | QQQ top 10 | VGT top 5 | All in QQQ | All in VGT |
+|---|---:|---:|---:|---:|
+| 2020 | +46.2% | +46.8% | +46.0% | +43.4% |
+| 2021 | +36.6% | +38.5% | +27.4% | +30.5% |
+| 2022 | -39.1% | -26.7% | -32.6% | -29.7% |
+| 2023 | +74.6% | +60.3% | +54.9% | +52.7% |
+| 2024 | +49.2% | +40.2% | +25.6% | +29.3% |
+| 2025 | +23.6% | +19.0% | +20.8% | +21.8% |
+
+Two notes. Averaging the six yearly numbers would overstate the result (for QQQ top 10 it gives 31.8% instead of
+25.6%), because after a 39% loss you need a 64% gain just to get back to even; the compound figures above are the
+right ones. And VGT top 5's strategy return is slightly higher than QQQ top 10's, but its money-weighted return is
+lower: it did best in 2020-2022 when balances were small, while QQQ top 10 did best in 2023-2024 when balances were
+large. For someone buying every week, the money-weighted figure is the one that matches the account.
+
 ## Year by year: does the winner stay the winner?
 
 Each year below is computed on its own: that year's purchases, valued at that year's end. The last two columns

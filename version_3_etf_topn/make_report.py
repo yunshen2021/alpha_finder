@@ -82,6 +82,43 @@ def yearly_table(scenario: dict, etf: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def time_weighted(v: pd.Series, deposits: pd.Series) -> pd.Series:
+    """Daily returns with each day's deposit removed: (V_t - deposit_t) / V_(t-1) - 1."""
+    return ((v - deposits) / v.shift(1) - 1).iloc[1:]
+
+
+def returns_tables(R: dict, curves: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Annual returns two ways (flat plan): money-weighted (your return with weekly deposits) and
+    time-weighted (the strategy's own return, as funds report it), plus calendar years."""
+    c = curves[("flat", "QQQ")]
+    series = {"QQQ top 10": c["Top 10"], "VGT top 5": curves[("flat", "VGT")]["Top 5"],
+              "All in QQQ": c["All in QQQ"], "All in VGT": c["All in VGT"]}
+    deposits = pd.Series(0.0, index=c.index)
+    deposits[wednesday_schedule("2020-01-01", "2025-12-31", c.index)] = 1000.0
+    twr = {k: time_weighted(v, deposits) for k, v in series.items()}
+    flat = R["scenarios"]["flat"]["periods"]
+
+    def mwr(period, key):
+        where = {"QQQ top 10": ("QQQ", "Top 10"), "VGT top 5": ("VGT", "Top 5"),
+                 "All in QQQ": ("benchmarks", "All in QQQ"), "All in VGT": ("benchmarks", "All in VGT")}[key]
+        return by_label(flat[period][where[0]])[where[1]]["annual_return"]
+
+    def annualized(r):
+        years = ((r.index[-1] - r.index[0]).days + 1) / 365.25
+        return (1 + r).prod() ** (1 / years) - 1
+
+    summary = pd.DataFrame([{
+        "Portfolio": k,
+        "2020-2025, your return (money-weighted)": f"{mwr('2020-2025', k):.1%}",
+        "2020-2025, strategy return (time-weighted)": f"{annualized(r):.1%}",
+        "2024-2025, your return (money-weighted)": f"{mwr('2024-2025', k):.1%}",
+        "2024-2025, strategy return (time-weighted)": f"{annualized(r[r.index.year >= 2024]):.1%}",
+    } for k, r in twr.items()])
+    years = pd.DataFrame([{"Year": str(y), **{k: signed((1 + r[r.index.year == y]).prod() - 1) for k, r in twr.items()}}
+                          for y in range(2020, 2026)])
+    return summary, years
+
+
 def money_in_curve(index: pd.DatetimeIndex, scenario: str) -> pd.Series:
     dates = wednesday_schedule("2020-01-01", "2025-12-31", index)
     amount = (lambda d: 1000.0) if scenario == "flat" else (lambda d: 1000.0 * 1.15 ** (d.year - 2020))
@@ -131,6 +168,9 @@ def main():
         "TABLE_YEARLY_QQQ": md(yearly_table(flat, "QQQ")),
         "TABLE_YEARLY_VGT": md(yearly_table(flat, "VGT")),
     }
+    summary, years = returns_tables(R, curves)
+    tables["TABLE_RETURNS"] = md(summary)
+    tables["TABLE_CALENDAR"] = md(years)
     template = (HERE / "report_template.md").read_text()
     for key, table in tables.items():
         template = template.replace("{{" + key + "}}", table)

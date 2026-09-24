@@ -70,6 +70,28 @@ The ranking is the same as with the flat plan.
 
 {{TABLE_GROWING}}
 
+## Average annual returns
+
+With weekly buying, "average return" can mean two things, so both are shown:
+
+- **Your return (money-weighted):** the single yearly rate that turns your weekly deposits into the final value.
+  It counts *when* each dollar went in, like the "personal rate of return" a brokerage such as Fidelity shows.
+- **The strategy's return (time-weighted):** each day's deposit is removed, so the timing of your money does not
+  matter. This is how funds report performance. Check: for "All in QQQ" it equals QQQ's own total return exactly
+  (+194.5% over the period), and likewise for VGT.
+
+{{TABLE_RETURNS}}
+
+Calendar-year returns (time-weighted; 2020 starts on Jan 2):
+
+{{TABLE_CALENDAR}}
+
+Two notes. Averaging the six yearly numbers would overstate the result (for QQQ top 10 it gives 31.8% instead of
+25.6%), because after a 39% loss you need a 64% gain just to get back to even; the compound figures above are the
+right ones. And VGT top 5's strategy return is slightly higher than QQQ top 10's, but its money-weighted return is
+lower: it did best in 2020-2022 when balances were small, while QQQ top 10 did best in 2023-2024 when balances were
+large. For someone buying every week, the money-weighted figure is the one that matches the account.
+
 ## Year by year: does the winner stay the winner?
 
 Each year below is computed on its own: that year's purchases, valued at that year's end. The last two columns
