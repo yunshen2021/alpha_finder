@@ -95,6 +95,15 @@ def test_missing_ticker_omitted_not_cached(tmp_path):
     assert not (tmp_path / "prices" / "ZZZ.parquet").exists()
 
 
+def test_missing_ticker_not_refetched_immediately(tmp_path):
+    f = FakeFetcher(["AAA"])
+    load_prices(["AAA", "ZZZ"], "2020-01-01", "2020-12-31", cache_dir=tmp_path, fetcher=f)
+    load_prices(["AAA", "ZZZ"], "2020-01-01", "2020-12-31", cache_dir=tmp_path, fetcher=f)
+    assert len(f.calls) == 1  # ZZZ is remembered as missing, AAA is cached
+    load_prices(["ZZZ"], "2020-01-01", "2020-12-31", cache_dir=tmp_path, fetcher=f, refresh=True)
+    assert len(f.calls) == 2  # refresh asks again
+
+
 def test_corrupt_cache_is_refetched(tmp_path):
     f = FakeFetcher(["AAA"])
     load_prices(["AAA"], "2020-01-01", "2020-12-31", cache_dir=tmp_path, fetcher=f)

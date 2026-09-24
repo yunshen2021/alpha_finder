@@ -230,3 +230,29 @@ Then:
 - ML models, weekly rebalancing, shorting, value factor, price stop-losses
 - Optimizer-based portfolio construction
 - Intraday data or execution modeling beyond a simple cost assumption
+
+## 17. Implementation status (2026-09-24)
+
+Version 1 is built and evaluated on the development period only. Results and the full write-up are
+in [`reports/backtest_report.md`](../reports/backtest_report.md). Verdict: **it does not beat QQQ**
+(fails success criteria 1, 2 and 3), so per section 3 the reading is "buy QQQ" for this version.
+
+What was built: cached price loader, QQQ benchmark, data quality report, point-in-time S&P 500
+universe, 12-1 momentum, lot-level tax engine with wash sales, variants A/B/C, alpha/beta and
+drawdown statistics, IC diagnostics, run log, shuffled-signal and lag sanity tests (40 tests).
+
+Deviations from this plan, and why:
+
+- **Dev window is Feb 2011 to Dec 2019**, not 2010: the 12-month lookback needs a year of prices first.
+- **Momentum only.** Quality (S2) needs filing-date-correct fundamentals and is not built. Low-vol (S3) was not tested.
+- **Sector caps use today's GICS sectors**; names that left the index have no label and are uncapped.
+- **Holdout (2020 onward) is unspent on purpose**: the finalist failed the dev bar by ~9 points, so it
+  does not qualify, and the holdout is kept clean for a candidate that does.
+- **Finalist rule** (fixed in advance): best dev-period after-tax return among A, B, C. B was selected, though
+  A, B and C are within noise of each other.
+- **Tax gate (X3c) showed no benefit**; per section 11 it is dropped from further work unless a new signal changes that.
+- **Coverage gap**: Yahoo has no prices for many former members (69% of index members priced in 2011,
+  99.5% today), so survivorship bias is reduced but not removed.
+
+Open items: confirm NIIT applicability and the MA rate on investment gains (config `TAX` in
+`src/alpha_finder/research.py`); choose the next direction (see the report's "What I would do next").

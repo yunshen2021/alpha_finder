@@ -1,0 +1,63 @@
+{
+ "qqq_pre_tax_engine": 0.1721163000587269,
+ "qqq_after_tax": 0.14597477916353152,
+ "spy_pre_tax": 0.1296191406545475,
+ "ew_universe_survivor_only": 0.1335293289679398,
+ "top25_frictionless": 0.12489681227845817,
+ "months": 108,
+ "window": [
+  "2011-02-28",
+  "2019-12-31"
+ ],
+ "A": {
+  "pre_tax_cagr": 0.1055794939235466,
+  "after_tax_cagr": 0.07467679352609013,
+  "final_after_tax": 1899936.7209516314,
+  "tax_paid_to_date": 326954.30118673894,
+  "liquidation_tax": 80048.59214888999,
+  "realized_st_net": 611886.694175571,
+  "realized_lt_net": 423379.76065645175,
+  "dividends_taxed": 152546.91794251036,
+  "buy_volume": 51928699.433577254,
+  "sell_volume": 51233598.80301201,
+  "max_dd_pre_tax": -0.2936523407936592,
+  "n_trades": 2551,
+  "disallowed_wash_loss": 24606.60000442217
+ },
+ "B": {
+  "pre_tax_cagr": 0.09931415689421796,
+  "after_tax_cagr": 0.07647725133355943,
+  "final_after_tax": 1928491.8946673744,
+  "tax_paid_to_date": 226331.44047122775,
+  "liquidation_tax": 78907.65981776227,
+  "realized_st_net": -278315.417516345,
+  "realized_lt_net": 1146289.3211207883,
+  "dividends_taxed": 162991.15204852185,
+  "buy_volume": 22134225.610866517,
+  "sell_volume": 21246488.89143846,
+  "max_dd_pre_tax": -0.34292452765139625,
+  "n_trades": 960,
+  "disallowed_wash_loss": 0.0
+ },
+ "C": {
+  "pre_tax_cagr": 0.08993644307607052,
+  "after_tax_cagr": 0.0703876376077619,
+  "final_after_tax": 1833417.662669733,
+  "tax_paid_to_date": 191763.30358035673,
+  "liquidation_tax": 75987.95036460835,
+  "realized_st_net": -574153.9361642933,
+  "realized_lt_net": 1315002.961562822,
+  "dividends_taxed": 164472.74479241014,
+  "buy_volume": 21434518.47414373,
+  "sell_volume": 20509810.183046136,
+  "max_dd_pre_tax": -0.3351189583894303,
+  "n_trades": 934,
+  "disallowed_wash_loss": 0.0
+ },
+ "qqq": {
+  "final_after_tax": 3367833.6714994637,
+  "max_dd_pre_tax": -0.22673499425102883,
+  "liquidation_tax": 672042.692317155,
+  "tax_paid_to_date": 36834.5941132353
+ }
+}

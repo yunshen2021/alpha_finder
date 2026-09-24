@@ -44,7 +44,18 @@ def yahoo_symbol(ticker: str) -> str:
     return ticker.replace(".", "-")
 
 
+CHUNK_SIZE = 80
+
+
 def yfinance_fetch(tickers: list[str], start: date, end: date) -> dict[str, pd.DataFrame]:
+    """Download in chunks to stay under Yahoo's rate limits."""
+    out: dict[str, pd.DataFrame] = {}
+    for i in range(0, len(tickers), CHUNK_SIZE):
+        out.update(_fetch_chunk(tickers[i : i + CHUNK_SIZE], start, end))
+    return out
+
+
+def _fetch_chunk(tickers: list[str], start: date, end: date) -> dict[str, pd.DataFrame]:
     import yfinance as yf
 
     symbols = {t: yahoo_symbol(t) for t in tickers}
@@ -99,6 +110,25 @@ def _cache_files(ticker: str, cache_dir: Path) -> tuple[Path, Path]:
     return base / f"{ticker}.parquet", base / f"{ticker}.json"
 
 
+MISSING_TTL_DAYS = 7  # how long a "no data" answer is trusted before asking again
+
+
+def _missing_path(cache_dir: Path) -> Path:
+    return cache_dir / "prices" / "_missing.json"
+
+
+def _read_missing(cache_dir: Path) -> dict[str, str]:
+    try:
+        return json.loads(_missing_path(cache_dir).read_text())
+    except Exception:
+        return {}
+
+
+def _recently_missing(ticker: str, missing: dict[str, str]) -> bool:
+    seen = missing.get(ticker)
+    return seen is not None and (date.today() - date.fromisoformat(seen)).days < MISSING_TTL_DAYS
+
+
 def _slice(df: pd.DataFrame, start: date, end: date) -> pd.DataFrame:
     return df.loc[pd.Timestamp(start) : pd.Timestamp(end)]
 
@@ -149,22 +179,30 @@ def load_prices(
 
     result: dict[str, pd.DataFrame] = {}
     to_fetch: list[str] = []
+    missing = {} if refresh else _read_missing(cache_dir)
     for t in names:
         cached = None if refresh else _read_cache(t, start_d, end_d, cache_dir)
-        if cached is None:
-            to_fetch.append(t)
-        else:
+        if cached is not None:
             result[t] = cached
+        elif not _recently_missing(t, missing):
+            to_fetch.append(t)
 
     if to_fetch:
         fetched = fetcher(to_fetch, start_d, end_d)
+        newly_missing = []
         for t in to_fetch:
             df = fetched.get(t)
             if df is None or df.empty:
                 log.warning("no data returned for %s", t)
+                newly_missing.append(t)
                 continue
             _write_cache(t, df, start_d, end_d, cache_dir)
             result[t] = _slice(df, start_d, end_d)
+            missing.pop(t, None)
+        if newly_missing:
+            missing.update({t: date.today().isoformat() for t in newly_missing})
+            _missing_path(cache_dir).parent.mkdir(parents=True, exist_ok=True)
+            _missing_path(cache_dir).write_text(json.dumps(missing))
 
     return {t: result[t] for t in names if t in result}
 
