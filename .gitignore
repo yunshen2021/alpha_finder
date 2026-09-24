@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+data_cache/*
+!data_cache/.gitkeep
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/

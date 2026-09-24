@@ -1,0 +1,10 @@
+yfinance>=0.2.40
+pandas>=2.2
+numpy>=1.26
+scipy>=1.13
+requests>=2.32
+lxml>=5.2
+beautifulsoup4>=4.12
+tqdm>=4.66
+tabulate>=0.9
+matplotlib>=3.9
