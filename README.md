@@ -10,6 +10,7 @@ so results are comparable.
 |---|---|---|---|
 | 1 | [`version_1_rules/`](version_1_rules/) | **Done** | 12-1 momentum rules on the S&P 500 does **not** beat QQQ: 7.6% vs 14.6% a year after tax (2011-2019) |
 | 2 | [`version_2_ml/`](version_2_ml/) | **On hold** | Machine learning with many features. Plan and open decisions only, no code yet |
+| 3 | [`version_3_etf_topn/`](version_3_etf_topn/) | **Done** | Buying only the top N holdings of QQQ or VGT every week, never selling, beat both ETFs in 2020-2025. Best: QQQ top 10, $692k vs $562k for QQQ from $314k put in (no taxes). Partly a never-sell effect and a concentrated bet on mega-caps; see the report |
 
 ## Folder map
 
@@ -23,15 +24,17 @@ alpha_finder/
 │   ├── run_dev.py, make_dev_assets.py   scripts that produce the results
 │   └── results/                  figures, CSVs, JSON, run_log.jsonl (every trial)
 ├── version_2_ml/              <- placeholder for the ML version (on hold)
+├── version_3_etf_topn/        <- top N holdings of QQQ/VGT vs the ETF itself (weekly buying, 2020-2025)
 ├── data/                      <- all data files, shared by every version
 │   ├── universe/                 S&P 500 membership snapshots (in git)
+│   ├── etf_holdings/             QQQ and VGT holdings from SEC filings, 2019-2025 (in git)
 │   └── prices/                   downloaded Yahoo prices (local only, not in git)
 ├── docs/
 │   └── strategy_rules.md         project-wide rules: goal, tax assumptions, success criteria,
 │                                 validation discipline, failure modes
 ├── src/alpha_finder/          <- shared toolbox used by every version (see below)
 ├── scripts/                   <- shared utilities (download data)
-├── tests/                     <- 42 automated tests
+├── tests/                     <- 87 automated tests
 └── examples/                  <- empty placeholder from the original scaffold
 ```
 
@@ -39,10 +42,10 @@ Shared toolbox in `src/alpha_finder/` (nothing version-specific belongs here):
 
 | Folder | Purpose |
 |---|---|
-| `data/` | Price loader with caching, QQQ benchmark, data quality report (code only; the data files are in `/data`) |
+| `data/` | Price loader with caching, QQQ benchmark, data quality report, SEC N-PORT holdings reader, estimated prices for delisted stocks (code only; the data files are in `/data`) |
 | `universe/` | Point-in-time S&P 500 membership rebuilt from the snapshots |
 | `signals/` | Building blocks: month-end dates, momentum score, ranking, signal-quality (IC) diagnostics |
-| `backtest/` | **Tax-lot engine** (wash sales, loss carryforward), performance statistics |
+| `backtest/` | **Tax-lot engine** (wash sales, loss carryforward), performance statistics, weekly-buying engine with spin-offs and buyouts |
 | `reporting/` | Chart code |
 | `research.py` | Shared setup: market data, the dev/holdout split, tax rates, run logging |
 

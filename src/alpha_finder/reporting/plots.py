@@ -5,6 +5,7 @@ from __future__ import annotations
 import matplotlib
 
 matplotlib.use("Agg")
+matplotlib.rcParams["text.parse_math"] = False  # "$1,000 ... $458,206" is money, not a math formula
 import matplotlib.pyplot as plt  # noqa: E402
 import matplotlib.ticker as mt  # noqa: E402
 import pandas as pd  # noqa: E402
@@ -99,5 +100,82 @@ def ladder_chart(rows: list[tuple[str, float, str]], path: str, title: str, subt
     fig.text(0.02, 0.945, title, color=INK, fontsize=12, fontweight="bold", ha="left")
     fig.text(0.02, 0.895, subtitle, color=INK2, fontsize=9, ha="left")
     fig.subplots_adjust(top=0.84, left=0.38, right=0.96, bottom=0.08)
+    fig.savefig(path, facecolor=SURFACE)
+    plt.close(fig)
+
+
+# --- version 3: top-N of an ETF versus the ETF itself ---------------------------------------
+
+def topn_bars(labels: list[str], values: list[float], etf_value: float, etf_label: str, path: str,
+              title: str, subtitle: str, invested: float, cash_label: str = "Money put in") -> None:
+    """One bar per portfolio (top N, in order), a reference line at the ETF's value.
+
+    Every bar is labeled with its value and its difference from the ETF, so nothing has to be
+    read off the axis.
+    """
+    fig, ax = plt.subplots(figsize=(9, 4.6), dpi=150, facecolor=SURFACE)
+    _style(ax)
+    xs = list(range(len(labels)))
+    ax.bar(xs, [v / 1e3 for v in values], width=0.5, color=COLORS["QQQ"])
+    ax.axhline(etf_value / 1e3, color=COLORS["A"], linewidth=1.6, zorder=3)
+    ax.axhline(invested / 1e3, color=NEUTRAL, linewidth=1.2, zorder=3)
+    ax.set_xlim(-0.6, len(labels) + 0.9)  # free space on the right for the reference-line labels
+    ax.text(len(labels) - 0.35, etf_value / 1e3, f"{etf_label}\n${etf_value / 1e3:,.1f}k", color=INK, fontsize=9,
+            va="center", ha="left", linespacing=1.3)
+    ax.text(len(labels) - 0.35, invested / 1e3, f"{cash_label}\n${invested / 1e3:,.1f}k", color=INK2, fontsize=9,
+            va="center", ha="left", linespacing=1.3)
+    top = max(values + [etf_value]) / 1e3
+    for x, v in zip(xs, values):
+        diff = v - etf_value
+        ax.text(x, v / 1e3 + top * 0.012, f"${v / 1e3:,.1f}k\n{diff / etf_value:+.1%}", ha="center", va="bottom",
+                color=INK, fontsize=8.5, linespacing=1.3)
+    ax.set_xticks(xs)
+    ax.set_xticklabels(labels, color=INK, fontsize=9)
+    ax.set_ylim(0, top * 1.16)
+    ax.yaxis.set_major_formatter(mt.FuncFormatter(lambda v, _: f"${v:,.0f}k"))
+    fig.text(0.075, 0.945, title, color=INK, fontsize=12, fontweight="bold", ha="left")
+    fig.text(0.075, 0.895, subtitle, color=INK2, fontsize=9, ha="left")
+    fig.subplots_adjust(top=0.84, left=0.09, right=0.97, bottom=0.09)
+    fig.savefig(path, facecolor=SURFACE)
+    plt.close(fig)
+
+
+def topn_lines(curves: dict[str, pd.Series], path: str, title: str, subtitle: str,
+               reference: tuple[str, pd.Series] | None = None) -> None:
+    """Portfolio value over time. First curve is the ETF itself (blue); the others use the next slots.
+    `reference` (label, series) is drawn in neutral gray, e.g. the money put in so far."""
+    order = ["QQQ", "A", "B", "C"]
+    fig, ax = plt.subplots(figsize=(9, 4.6), dpi=150, facecolor=SURFACE)
+    _style(ax)
+    ends = []
+    if reference is not None:
+        ref_label, ref = reference
+        ax.plot(ref.index, ref / 1e3, color=NEUTRAL, linewidth=1.4, label=ref_label)
+        ends.append((ref_label, ref.iloc[-1] / 1e3, ref.index[-1]))
+    for key, (label, s) in zip(order, curves.items()):
+        ax.plot(s.index, s / 1e3, color=COLORS[key], linewidth=1.6, solid_capstyle="round", label=label)
+        ax.plot(s.index[-1], s.iloc[-1] / 1e3, "o", color=COLORS[key], markersize=6,
+                markeredgecolor=SURFACE, markeredgewidth=1.5)
+        ends.append((label, s.iloc[-1] / 1e3, s.index[-1]))
+    ends.sort(key=lambda t: t[1])
+    gap = 0.05 * max(e[1] for e in ends)
+    placed: list[float] = []
+    for _, y, _ in ends:
+        placed.append(max(y, placed[-1] + gap) if placed else y)
+    x_end = max(e[2] for e in ends)
+    starts = [s.index[0] for s in curves.values()]
+    span = x_end - min(starts)
+    for (label, y, _), y_lab in zip(ends, placed):
+        ax.text(x_end + span * 0.012, y_lab, f"{label}  ${y:,.0f}k", color=INK, fontsize=8.5, va="center", ha="left")
+    ax.yaxis.set_major_formatter(mt.FuncFormatter(lambda v, _: f"${v:,.0f}k"))
+    ax.set_xlim(right=x_end + span * 0.20)
+    years = [pd.Timestamp(f"{y}-01-01") for y in range(min(starts).year, x_end.year + 2)
+             if pd.Timestamp(f"{y}-01-01") <= x_end + pd.Timedelta(days=1)]
+    ax.set_xticks(years)
+    ax.set_xticklabels([str(y.year) for y in years])
+    ax.legend(loc="upper left", frameon=False, fontsize=9, labelcolor=INK2)
+    fig.text(0.075, 0.945, title, color=INK, fontsize=12, fontweight="bold", ha="left")
+    fig.text(0.075, 0.895, subtitle, color=INK2, fontsize=9, ha="left")
+    fig.subplots_adjust(top=0.84, left=0.09, right=0.97, bottom=0.09)
     fig.savefig(path, facecolor=SURFACE)
     plt.close(fig)

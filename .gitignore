@@ -2,9 +2,11 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
-# Downloaded prices stay local (large, re-downloadable). The small index snapshots in data/universe/ are tracked.
+# Downloaded prices and raw filings stay local (large, re-downloadable). Small curated inputs are tracked:
+# index snapshots (data/universe/) and ETF holdings built from SEC filings (data/etf_holdings/).
 data/*
 !data/universe/
+!data/etf_holdings/
 !data/README.md
 *.egg-info/
 .pytest_cache/

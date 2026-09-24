@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Callable, Iterable
@@ -47,11 +48,46 @@ def yahoo_symbol(ticker: str) -> str:
 CHUNK_SIZE = 80
 
 
+RATE_LIMIT_WAITS = (30, 90, 240)  # seconds to wait before each retry after HTTP 429
+
+
+def _rate_limited(symbols: list[str]) -> list[str]:
+    """Symbols whose last yfinance attempt failed because of Yahoo's rate limit (not missing data)."""
+    from yfinance import shared
+
+    errors = getattr(shared, "_ERRORS", {}) or {}
+    hits = []
+    for sym in symbols:
+        msg = str(errors.get(sym, ""))
+        if "Rate" in msg or "Too Many Requests" in msg:
+            hits.append(sym)
+    return hits
+
+
 def yfinance_fetch(tickers: list[str], start: date, end: date) -> dict[str, pd.DataFrame]:
-    """Download in chunks to stay under Yahoo's rate limits."""
+    """Download in chunks, retrying symbols that hit Yahoo's rate limit.
+
+    A rate-limited symbol is never reported as "no data" (that answer is cached for a week);
+    if it still fails after the retries, this raises instead.
+    """
     out: dict[str, pd.DataFrame] = {}
     for i in range(0, len(tickers), CHUNK_SIZE):
-        out.update(_fetch_chunk(tickers[i : i + CHUNK_SIZE], start, end))
+        chunk = tickers[i : i + CHUNK_SIZE]
+        got = _fetch_chunk(chunk, start, end)
+        out.update(got)
+        retry = [t for t in _rate_limited([yahoo_symbol(t) for t in chunk])]
+        retry = [t for t in chunk if yahoo_symbol(t) in retry and t not in got]
+        for wait in RATE_LIMIT_WAITS:
+            if not retry:
+                break
+            log.warning("Yahoo rate limit on %d symbols; waiting %ds", len(retry), wait)
+            time.sleep(wait)
+            got = _fetch_chunk(retry, start, end)
+            out.update(got)
+            still = set(_rate_limited([yahoo_symbol(t) for t in retry]))
+            retry = [t for t in retry if yahoo_symbol(t) in still and t not in got]
+        if retry:
+            raise RuntimeError(f"Yahoo is still rate-limiting {len(retry)} symbols; try again later")
     return out
 
 

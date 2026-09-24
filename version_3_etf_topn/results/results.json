@@ -1,0 +1,4642 @@
+{
+ "schedule": {
+  "purchases": 314,
+  "first": "2020-01-02",
+  "last": "2025-12-31",
+  "valued_on": "2025-12-31"
+ },
+ "audit": {
+  "price_checks": 9377,
+  "price_flags": 11,
+  "unmapped_wrong_ticker": [
+   "Coherent Inc",
+   "Coherent Inc."
+  ],
+  "price_flags_top75": 0,
+  "spinoffs": [
+   {
+    "parent": "DELL",
+    "child": "VMW",
+    "date": "2021-11-02",
+    "ratio": 0.440626,
+    "yahoo_factor": 1.973,
+    "value_removed_pct": 0.4931576279776989,
+    "child_value_pct": 0.49321592449946416
+   },
+   {
+    "parent": "IBM",
+    "child": "KD",
+    "date": "2021-11-04",
+    "ratio": 0.2,
+    "yahoo_factor": 1.046,
+    "value_removed_pct": 0.04397705544933084,
+    "child_value_pct": 0.04150082361967563
+   },
+   {
+    "parent": "EXC",
+    "child": "CEG",
+    "date": "2022-02-02",
+    "ratio": 0.3333333333333333,
+    "yahoo_factor": 1.402,
+    "value_removed_pct": 0.2867332382310984,
+    "child_value_pct": 0.30555072991277493
+   },
+   {
+    "parent": "FLEX",
+    "child": "NXT",
+    "date": "2024-01-03",
+    "ratio": 0.1713,
+    "yahoo_factor": 1.327,
+    "value_removed_pct": 0.24642049736247174,
+    "child_value_pct": 0.2623773152500182
+   },
+   {
+    "parent": "ILMN",
+    "child": "GRAL",
+    "date": "2024-06-25",
+    "ratio": 0.16666666666666666,
+    "yahoo_factor": 1.028,
+    "value_removed_pct": 0.027237354085603127,
+    "child_value_pct": 0.025701500626122413
+   },
+   {
+    "parent": "WDC",
+    "child": "SNDK",
+    "date": "2025-02-24",
+    "ratio": 0.3333333333333333,
+    "yahoo_factor": 1.323,
+    "value_removed_pct": 0.2441421012849584,
+    "child_value_pct": 0.2357735274930861
+   },
+   {
+    "parent": "HON",
+    "child": "SOLS",
+    "date": "2025-10-30",
+    "ratio": 0.25,
+    "yahoo_factor": 1.061,
+    "value_removed_pct": 0.057492931196983954,
+    "child_value_pct": 0.057236135255801124
+   }
+  ],
+  "acquisitions": [
+   {
+    "target": "ALXN",
+    "date": "2021-07-21",
+    "cash": 60.0,
+    "acquirer": "AZN",
+    "ratio": 2.1243
+   },
+   {
+    "target": "WORK",
+    "date": "2021-07-21",
+    "cash": 26.79,
+    "acquirer": "CRM",
+    "ratio": 0.0776
+   },
+   {
+    "target": "MXIM",
+    "date": "2021-08-26",
+    "cash": 0.0,
+    "acquirer": "ADI",
+    "ratio": 0.63
+   },
+   {
+    "target": "XLNX",
+    "date": "2022-02-14",
+    "cash": 0.0,
+    "acquirer": "AMD",
+    "ratio": 1.7234
+   },
+   {
+    "target": "NUAN",
+    "date": "2022-03-04",
+    "cash": 56.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "CERN",
+    "date": "2022-06-08",
+    "cash": 95.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "CTXS",
+    "date": "2022-09-30",
+    "cash": 104.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "ZEN",
+    "date": "2022-11-22",
+    "cash": 77.5,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "COUP",
+    "date": "2023-02-28",
+    "cash": 81.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "ATVI",
+    "date": "2023-10-13",
+    "cash": 95.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "VMW",
+    "date": "2023-11-22",
+    "cash": 71.25,
+    "acquirer": "AVGO",
+    "ratio": 0.126
+   },
+   {
+    "target": "SGEN",
+    "date": "2023-12-14",
+    "cash": 229.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "SPLK",
+    "date": "2024-03-18",
+    "cash": 157.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "JNPR",
+    "date": "2025-07-02",
+    "cash": 40.0,
+    "acquirer": null,
+    "ratio": 0.0
+   },
+   {
+    "target": "ANSS",
+    "date": "2025-07-17",
+    "cash": 197.0,
+    "acquirer": "SNPS",
+    "ratio": 0.345
+   },
+   {
+    "target": "WBA",
+    "date": "2025-08-28",
+    "cash": 11.45,
+    "acquirer": null,
+    "ratio": 0.0
+   }
+  ],
+  "estimated": {
+   "ALXN": {
+    "anchors": 8,
+    "worst_leave_one_out": 0.1006566797345887
+   },
+   "WORK": {
+    "anchors": 4,
+    "worst_leave_one_out": 0.21738464817333636
+   },
+   "WBA": {
+    "anchors": 20,
+    "worst_leave_one_out": 0.20187522699171412
+   },
+   "MXIM": {
+    "anchors": 15,
+    "worst_leave_one_out": 0.07157584671870154
+   },
+   "XLNX": {
+    "anchors": 19,
+    "worst_leave_one_out": 0.0729195688194928
+   },
+   "NUAN": {
+    "anchors": 10,
+    "worst_leave_one_out": 0.1668720237830672
+   },
+   "CERN": {
+    "anchors": 9,
+    "worst_leave_one_out": 0.0655623569874183
+   },
+   "CTXS": {
+    "anchors": 17,
+    "worst_leave_one_out": 0.3419792114411455
+   },
+   "ATVI": {
+    "anchors": 16,
+    "worst_leave_one_out": 0.2928620965694628
+   },
+   "ZEN": {
+    "anchors": 12,
+    "worst_leave_one_out": 0.26823892973883634
+   },
+   "COUP": {
+    "anchors": 14,
+    "worst_leave_one_out": 0.18440903060161484
+   },
+   "VMW": {
+    "anchors": 16,
+    "worst_leave_one_out": 0.2281167125244079
+   },
+   "SGEN": {
+    "anchors": 16,
+    "worst_leave_one_out": 0.2860502825299214
+   },
+   "SPLK": {
+    "anchors": 31,
+    "worst_leave_one_out": 0.20811496923889472
+   },
+   "JNPR": {
+    "anchors": 23,
+    "worst_leave_one_out": 0.11703502332581073
+   },
+   "ANSS": {
+    "anchors": 46,
+    "worst_leave_one_out": 0.16422262346513739
+   },
+   "EA": {
+    "anchors": 26,
+    "worst_leave_one_out": 0.12242612212855941
+   }
+  },
+  "symbols_without_prices": [
+   "ACIA",
+   "ALTR",
+   "AZPN",
+   "CATM",
+   "CCMP",
+   "CDK",
+   "CELG",
+   "CFLT",
+   "CLDR",
+   "CLGX",
+   "CSOD",
+   "FLIR",
+   "IPHI",
+   "MDLA",
+   "MOBL",
+   "MTSC",
+   "MYL",
+   "PFPT",
+   "PRO",
+   "PRSP",
+   "QADA",
+   "RP",
+   "RST",
+   "SMCIP",
+   "SPWRW",
+   "ZIXI"
+  ]
+ },
+ "scenarios": {
+  "flat": {
+   "label": "$1,000 every week",
+   "periods": {
+    "2020-2025": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 314000.0,
+       "final_value": 561816.0956898405,
+       "gain": 247816.0956898405,
+       "annual_return": 0.1950117660028169,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.05795015424927308,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 314000.0,
+       "final_value": 596376.1877611952,
+       "gain": 282376.18776119524,
+       "annual_return": 0.215272575618236,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.06151495540354568,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 314000.0,
+       "final_value": 314000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 314000.0,
+       "final_value": 598312.0809536054,
+       "gain": 284312.08095360536,
+       "annual_return": 0.21637448674428145,
+       "cash_from_buyouts": 3317.9409666044558,
+       "vs_QQQ_pct": 0.06496073278027459,
+       "vs_VGT_pct": 0.0032460940462386567,
+       "vs_own_etf_pct": 0.06496073278027459
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 314000.0,
+       "final_value": 605715.4820955344,
+       "gain": 291715.48209553445,
+       "annual_return": 0.22055780005328757,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.07813835655917067,
+       "vs_VGT_pct": 0.01566007249450907,
+       "vs_own_etf_pct": 0.07813835655917067
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 314000.0,
+       "final_value": 692140.4028444778,
+       "gain": 378140.4028444778,
+       "annual_return": 0.2661380738012113,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.23196969284871627,
+       "vs_VGT_pct": 0.16057685911770347,
+       "vs_own_etf_pct": 0.23196969284871627
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 314000.0,
+       "final_value": 674277.9001222309,
+       "gain": 360277.9001222309,
+       "annual_return": 0.2571711384819298,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.20017547609471964,
+       "vs_VGT_pct": 0.1306251221288357,
+       "vs_own_etf_pct": 0.20017547609471964
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 314000.0,
+       "final_value": 667169.1174882458,
+       "gain": 353169.1174882458,
+       "annual_return": 0.25354086165997114,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.187522256138007,
+       "vs_VGT_pct": 0.11870515822036465,
+       "vs_own_etf_pct": 0.187522256138007
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 314000.0,
+       "final_value": 652214.2336154773,
+       "gain": 338214.23361547734,
+       "annual_return": 0.24578446547654803,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.1609034319578173,
+       "vs_VGT_pct": 0.09362889900735127,
+       "vs_own_etf_pct": 0.1609034319578173
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 314000.0,
+       "final_value": 625770.782531483,
+       "gain": 311770.782531483,
+       "annual_return": 0.2316533692186051,
+       "cash_from_buyouts": 1356.6744435417759,
+       "vs_QQQ_pct": 0.11383562580761253,
+       "vs_VGT_pct": 0.04928867948372573,
+       "vs_own_etf_pct": 0.11383562580761253
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 314000.0,
+       "final_value": 608100.8002690548,
+       "gain": 294100.80026905483,
+       "annual_return": 0.22189539711100784,
+       "cash_from_buyouts": 1966.3536889983739,
+       "vs_QQQ_pct": 0.08238408428363453,
+       "vs_VGT_pct": 0.01965975964243971,
+       "vs_own_etf_pct": 0.08238408428363453
+      }
+     ],
+     "QQQ_estimated_exposure": {
+      "ALL": {
+       "ALXN": {
+        "dollars_bought": 207.09863024785653,
+        "end_value": 416.85447473242976,
+        "error_rate_used": 0.1006566797345887,
+        "max_error_dollars": 41.95918735907238,
+        "anchors": 8,
+        "worst_leave_one_out": 0.1006566797345887
+       },
+       "WBA": {
+        "dollars_bought": 676.3136332447616,
+        "end_value": 246.11529585809248,
+        "error_rate_used": 0.20187522699171412,
+        "max_error_dollars": 49.684581217485295,
+        "anchors": 20,
+        "worst_leave_one_out": 0.20187522699171412
+       },
+       "MXIM": {
+        "dollars_bought": 156.93502501174612,
+        "end_value": 359.6074321222712,
+        "error_rate_used": 0.07157584671870154,
+        "max_error_dollars": 25.73920644048955,
+        "anchors": 15,
+        "worst_leave_one_out": 0.07157584671870154
+       },
+       "XLNX": {
+        "dollars_bought": 290.4954575673708,
+        "end_value": 864.6580471995405,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 63.050491978095145,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CERN": {
+        "dollars_bought": 206.2867475258378,
+        "end_value": 264.0326676241259,
+        "error_rate_used": 0.0655623569874183,
+        "max_error_dollars": 17.310604011113305,
+        "anchors": 9,
+        "worst_leave_one_out": 0.0655623569874183
+       },
+       "CTXS": {
+        "dollars_bought": 88.13714099421162,
+        "end_value": 68.87488025610712,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 23.553777238086834,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "ATVI": {
+        "dollars_bought": 971.03359788116,
+        "end_value": 1162.3766980350897,
+        "error_rate_used": 0.2928620965694628,
+        "max_error_dollars": 340.4160767900458,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2928620965694628
+       },
+       "SGEN": {
+        "dollars_bought": 517.1377549001688,
+        "end_value": 723.5661753195765,
+        "error_rate_used": 0.2860502825299214,
+        "max_error_dollars": 206.97630887925948,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2860502825299214
+       },
+       "SPLK": {
+        "dollars_bought": 321.16458508594667,
+        "end_value": 360.04964943959703,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 74.93172171759656,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "ANSS": {
+        "dollars_bought": 621.5887071773271,
+        "end_value": 719.842693801089,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 118.21445565822643,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       },
+       "EA": {
+        "dollars_bought": 906.3268036424247,
+        "end_value": 1385.4349776025376,
+        "error_rate_used": 0.12242612212855941,
+        "max_error_dollars": 169.61343176914625,
+        "anchors": 26,
+        "worst_leave_one_out": 0.12242612212855941
+       }
+      },
+      "5": {},
+      "10": {},
+      "15": {},
+      "20": {},
+      "25": {},
+      "50": {
+       "WBA": {
+        "dollars_bought": 152.88369122255978,
+        "end_value": 46.04939342341679,
+        "error_rate_used": 0.20187522699171412,
+        "max_error_dollars": 9.296231750183011,
+        "anchors": 20,
+        "worst_leave_one_out": 0.20187522699171412
+       },
+       "XLNX": {
+        "dollars_bought": 8.247111758142331,
+        "end_value": 14.048873596768962,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 1.0244378050759495,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "ATVI": {
+        "dollars_bought": 1098.644204824819,
+        "end_value": 1310.6250501183586,
+        "error_rate_used": 0.2928620965694628,
+        "max_error_dollars": 383.8323999941198,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2928620965694628
+       },
+       "EA": {
+        "dollars_bought": 94.48488228760077,
+        "end_value": 162.33689496947935,
+        "error_rate_used": 0.12242612212855941,
+        "max_error_dollars": 19.874276529504602,
+        "anchors": 26,
+        "worst_leave_one_out": 0.12242612212855941
+       }
+      },
+      "75": {
+       "ALXN": {
+        "dollars_bought": 110.91943232192762,
+        "end_value": 225.84481200413873,
+        "error_rate_used": 0.1006566797345887,
+        "max_error_dollars": 22.732788911618986,
+        "anchors": 8,
+        "worst_leave_one_out": 0.1006566797345887
+       },
+       "WBA": {
+        "dollars_bought": 535.2107017205805,
+        "end_value": 169.51359363661436,
+        "error_rate_used": 0.20187522699171412,
+        "max_error_dollars": 34.22059519357271,
+        "anchors": 20,
+        "worst_leave_one_out": 0.20187522699171412
+       },
+       "XLNX": {
+        "dollars_bought": 137.82921169304728,
+        "end_value": 377.76217388763735,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 27.546254836200777,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CERN": {
+        "dollars_bought": 40.321427673109966,
+        "end_value": 54.225735858483006,
+        "error_rate_used": 0.0655623569874183,
+        "max_error_dollars": 3.5551670522593124,
+        "anchors": 9,
+        "worst_leave_one_out": 0.0655623569874183
+       },
+       "ATVI": {
+        "dollars_bought": 1023.8712200547925,
+        "end_value": 1225.4504033186422,
+        "error_rate_used": 0.2928620965694628,
+        "max_error_dollars": 358.88797435779134,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2928620965694628
+       },
+       "SGEN": {
+        "dollars_bought": 264.9297051385759,
+        "end_value": 332.1029177108372,
+        "error_rate_used": 0.2860502825299214,
+        "max_error_dollars": 94.9981334401962,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2860502825299214
+       },
+       "SPLK": {
+        "dollars_bought": 130.74191794292022,
+        "end_value": 115.84559971948335,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 24.10920342208159,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "ANSS": {
+        "dollars_bought": 22.954971098979726,
+        "end_value": 29.408120007965177,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 4.829478618885639,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       },
+       "EA": {
+        "dollars_bought": 552.7287756937621,
+        "end_value": 851.0856969301908,
+        "error_rate_used": 0.12242612212855941,
+        "max_error_dollars": 104.19512147424564,
+        "anchors": 26,
+        "worst_leave_one_out": 0.12242612212855941
+       }
+      }
+     },
+     "QQQ_replica_cashed_out": [],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 314000.0,
+       "final_value": 613583.6884598925,
+       "gain": 299583.6884598925,
+       "annual_return": 0.22495140532160282,
+       "cash_from_buyouts": 2401.106610035075,
+       "vs_QQQ_pct": 0.09214330662151604,
+       "vs_VGT_pct": 0.02885343354048797,
+       "vs_own_etf_pct": 0.02885343354048797
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 314000.0,
+       "final_value": 667833.6736042369,
+       "gain": 353833.6736042369,
+       "annual_return": 0.25388175804310575,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.18870512740333645,
+       "vs_VGT_pct": 0.1198194819134113,
+       "vs_own_etf_pct": 0.1198194819134113
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 314000.0,
+       "final_value": 659669.5210616778,
+       "gain": 345669.52106167783,
+       "annual_return": 0.24967169008697007,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.17417341034290845,
+       "vs_VGT_pct": 0.10612988009814184,
+       "vs_own_etf_pct": 0.10612988009814184
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 314000.0,
+       "final_value": 659317.0821876405,
+       "gain": 345317.0821876405,
+       "annual_return": 0.24948885261132953,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.17354608962934903,
+       "vs_VGT_pct": 0.10553891271669702,
+       "vs_own_etf_pct": 0.10553891271669702
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 314000.0,
+       "final_value": 651509.7466008071,
+       "gain": 337509.74660080706,
+       "annual_return": 0.2454149990690288,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.15964948601345053,
+       "vs_VGT_pct": 0.0924476194238808,
+       "vs_own_etf_pct": 0.0924476194238808
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 314000.0,
+       "final_value": 650508.007845553,
+       "gain": 336508.007845553,
+       "annual_return": 0.24488899646470205,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.15786644924583348,
+       "vs_VGT_pct": 0.09076790991197914,
+       "vs_own_etf_pct": 0.09076790991197914
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 314000.0,
+       "final_value": 633640.8625563296,
+       "gain": 319640.8625563296,
+       "annual_return": 0.23591658140377753,
+       "cash_from_buyouts": 592.6178063581804,
+       "vs_QQQ_pct": 0.1278439108767384,
+       "vs_VGT_pct": 0.06248518227232802,
+       "vs_own_etf_pct": 0.06248518227232802
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 314000.0,
+       "final_value": 624765.6830458333,
+       "gain": 310765.68304583326,
+       "annual_return": 0.2311052943895087,
+       "cash_from_buyouts": 1394.904490123825,
+       "vs_QQQ_pct": 0.1120466071352022,
+       "vs_VGT_pct": 0.04760333471933653,
+       "vs_own_etf_pct": 0.04760333471933653
+      }
+     ],
+     "VGT_estimated_exposure": {
+      "ALL": {
+       "WORK": {
+        "dollars_bought": 69.18089797162303,
+        "end_value": 80.5528474639523,
+        "error_rate_used": 0.21738464817333636,
+        "max_error_dollars": 17.510952405311702,
+        "anchors": 4,
+        "worst_leave_one_out": 0.21738464817333636
+       },
+       "MXIM": {
+        "dollars_bought": 197.1997759073528,
+        "end_value": 456.1074962944079,
+        "error_rate_used": 0.07157584671870154,
+        "max_error_dollars": 32.64628024201927,
+        "anchors": 15,
+        "worst_leave_one_out": 0.07157584671870154
+       },
+       "XLNX": {
+        "dollars_bought": 359.1249709438054,
+        "end_value": 1083.263316959339,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 78.99109399064855,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "NUAN": {
+        "dollars_bought": 129.78644956652235,
+        "end_value": 191.4613242030912,
+        "error_rate_used": 0.1668720237830672,
+        "max_error_dollars": 31.949538645955776,
+        "anchors": 10,
+        "worst_leave_one_out": 0.1668720237830672
+       },
+       "CTXS": {
+        "dollars_bought": 220.2880790553024,
+        "end_value": 193.52941230054685,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 66.18303580920934,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "ZEN": {
+        "dollars_bought": 187.20358125496682,
+        "end_value": 141.07417233494297,
+        "error_rate_used": 0.26823892973883634,
+        "max_error_dollars": 37.841585000917256,
+        "anchors": 12,
+        "worst_leave_one_out": 0.26823892973883634
+       },
+       "COUP": {
+        "dollars_bought": 219.927747954918,
+        "end_value": 96.13714818864024,
+        "error_rate_used": 0.18440903060161484,
+        "max_error_dollars": 17.72855830227094,
+        "anchors": 14,
+        "worst_leave_one_out": 0.18440903060161484
+       },
+       "VMW": {
+        "dollars_bought": 397.05986838035057,
+        "end_value": 358.6795259318476,
+        "error_rate_used": 0.2281167125244079,
+        "max_error_dollars": 81.82079430538619,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2281167125244079
+       },
+       "SPLK": {
+        "dollars_bought": 488.11197801888966,
+        "end_value": 563.9035284231095,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 117.35676547147963,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "JNPR": {
+        "dollars_bought": 295.8418609991721,
+        "end_value": 399.6546012660564,
+        "error_rate_used": 0.11703502332581073,
+        "max_error_dollars": 46.77358558144049,
+        "anchors": 23,
+        "worst_leave_one_out": 0.11703502332581073
+       },
+       "ANSS": {
+        "dollars_bought": 751.8645596058454,
+        "end_value": 870.2342852344764,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 142.91215735051438,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       }
+      },
+      "5": {},
+      "10": {},
+      "15": {},
+      "20": {},
+      "25": {},
+      "50": {
+       "XLNX": {
+        "dollars_bought": 411.1815088136619,
+        "end_value": 1237.6193861716092,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 90.24667200227908,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CTXS": {
+        "dollars_bought": 34.9789013633845,
+        "end_value": 26.592075671132292,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 9.093937068597091,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "VMW": {
+        "dollars_bought": 115.77911373494894,
+        "end_value": 87.51547012963347,
+        "error_rate_used": 0.2281167125244079,
+        "max_error_dollars": 19.963741341000006,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2281167125244079
+       },
+       "SPLK": {
+        "dollars_bought": 236.23501881445097,
+        "end_value": 216.1979132970586,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 44.99402207533058,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "ANSS": {
+        "dollars_bought": 464.7119314639901,
+        "end_value": 538.6521400153681,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 88.45886756843426,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       }
+      },
+      "75": {
+       "WORK": {
+        "dollars_bought": 18.085760018812206,
+        "end_value": 19.622291780500415,
+        "error_rate_used": 0.21738464817333636,
+        "max_error_dollars": 4.265584995058632,
+        "anchors": 4,
+        "worst_leave_one_out": 0.21738464817333636
+       },
+       "MXIM": {
+        "dollars_bought": 214.76926636846397,
+        "end_value": 495.68995698484235,
+        "error_rate_used": 0.07157584671870154,
+        "max_error_dollars": 35.47942838114684,
+        "anchors": 15,
+        "worst_leave_one_out": 0.07157584671870154
+       },
+       "XLNX": {
+        "dollars_bought": 391.1647507038725,
+        "end_value": 1178.0450356594513,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 85.9025360502312,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CTXS": {
+        "dollars_bought": 113.42216193735744,
+        "end_value": 88.11346778815167,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 30.132974231536885,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "ZEN": {
+        "dollars_bought": 6.7968642254369005,
+        "end_value": 4.061861354350776,
+        "error_rate_used": 0.26823892973883634,
+        "max_error_dollars": 1.0895493424385925,
+        "anchors": 12,
+        "worst_leave_one_out": 0.26823892973883634
+       },
+       "COUP": {
+        "dollars_bought": 122.80804317484717,
+        "end_value": 33.33424070701077,
+        "error_rate_used": 0.18440903060161484,
+        "max_error_dollars": 6.147135014620744,
+        "anchors": 14,
+        "worst_leave_one_out": 0.18440903060161484
+       },
+       "VMW": {
+        "dollars_bought": 329.3431832350988,
+        "end_value": 297.2608387668689,
+        "error_rate_used": 0.2281167125244079,
+        "max_error_dollars": 67.81016530174621,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2281167125244079
+       },
+       "SPLK": {
+        "dollars_bought": 461.0570068141319,
+        "end_value": 494.394398959488,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 102.89087513133569,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "JNPR": {
+        "dollars_bought": 3.6590226238586157,
+        "end_value": 4.058671080516444,
+        "error_rate_used": 0.11703502332581073,
+        "max_error_dollars": 0.47500666458003543,
+        "anchors": 23,
+        "worst_leave_one_out": 0.11703502332581073
+       },
+       "ANSS": {
+        "dollars_bought": 828.2809709635064,
+        "end_value": 957.768366561344,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 157.28723382862327,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       }
+      }
+     },
+     "VGT_replica_cashed_out": []
+    },
+    "2024-2025": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 105000.0,
+       "final_value": 129696.58888134352,
+       "gain": 24696.588881343516,
+       "annual_return": 0.22738165443803127,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.023714896479886227,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 105000.0,
+       "final_value": 132847.0427477658,
+       "gain": 27847.04274776581,
+       "annual_return": 0.2552449843787951,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02429095393792169,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 105000.0,
+       "final_value": 105000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 105000.0,
+       "final_value": 130105.71154160361,
+       "gain": 25105.71154160361,
+       "annual_return": 0.23101356552403712,
+       "cash_from_buyouts": 146.74461068747152,
+       "vs_QQQ_pct": 0.00315445968000283,
+       "vs_VGT_pct": -0.02063524448464471,
+       "vs_own_etf_pct": 0.00315445968000283
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 105000.0,
+       "final_value": 137675.19859917165,
+       "gain": 32675.19859917165,
+       "annual_return": 0.29749127245460855,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.061517498545220706,
+       "vs_VGT_pct": 0.036343720955632985,
+       "vs_own_etf_pct": 0.061517498545220706
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 105000.0,
+       "final_value": 142182.32550884294,
+       "gain": 37182.32550884294,
+       "annual_return": 0.3364488019204779,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.09626881273587196,
+       "vs_VGT_pct": 0.0702709113277129,
+       "vs_own_etf_pct": 0.09626881273587196
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 105000.0,
+       "final_value": 138742.12750564405,
+       "gain": 33742.12750564405,
+       "annual_return": 0.3067544778507574,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0697438437072242,
+       "vs_VGT_pct": 0.044374979193711805,
+       "vs_own_etf_pct": 0.0697438437072242
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 105000.0,
+       "final_value": 136239.59452485736,
+       "gain": 31239.594524857355,
+       "annual_return": 0.2849862220845185,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05044855612586607,
+       "vs_VGT_pct": 0.025537277359895194,
+       "vs_own_etf_pct": 0.05044855612586607
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 105000.0,
+       "final_value": 135073.6227449627,
+       "gain": 30073.62274496269,
+       "annual_return": 0.2747949009697373,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.041458560398519806,
+       "vs_VGT_pct": 0.016760478450577487,
+       "vs_own_etf_pct": 0.041458560398519806
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 105000.0,
+       "final_value": 133353.72580381733,
+       "gain": 28353.72580381733,
+       "annual_return": 0.25970404647600265,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02819763383152396,
+       "vs_VGT_pct": 0.0038140333843452723,
+       "vs_own_etf_pct": 0.02819763383152396
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 105000.0,
+       "final_value": 130989.26750591533,
+       "gain": 25989.267505915326,
+       "annual_return": 0.23884331077160093,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.009966943893601199,
+       "vs_VGT_pct": -0.0139843176289427,
+       "vs_own_etf_pct": 0.009966943893601199
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 105000.0,
+       "final_value": 133302.2173427098,
+       "gain": 28302.217342709802,
+       "annual_return": 0.2592510239417431,
+       "cash_from_buyouts": 247.53695325170074,
+       "vs_QQQ_pct": 0.027800487988662415,
+       "vs_VGT_pct": 0.0034263058140346914,
+       "vs_own_etf_pct": 0.0034263058140346914
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 105000.0,
+       "final_value": 137195.742621025,
+       "gain": 32195.742621025012,
+       "annual_return": 0.29332014694810504,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05782074767241796,
+       "vs_VGT_pct": 0.03273463814709077,
+       "vs_own_etf_pct": 0.03273463814709077
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 105000.0,
+       "final_value": 134589.7070301709,
+       "gain": 29589.707030170888,
+       "annual_return": 0.2705558974793175,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03772742360482573,
+       "vs_VGT_pct": 0.013117825179698173,
+       "vs_own_etf_pct": 0.013117825179698173
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 105000.0,
+       "final_value": 133156.87217242227,
+       "gain": 28156.87217242227,
+       "annual_return": 0.2579723590129851,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02667983268430052,
+       "vs_VGT_pct": 0.0023322267342054115,
+       "vs_own_etf_pct": 0.0023322267342054115
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 105000.0,
+       "final_value": 134238.67118914143,
+       "gain": 29238.67118914143,
+       "annual_return": 0.26747746933055516,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03502083090214003,
+       "vs_VGT_pct": 0.010475419042770051,
+       "vs_own_etf_pct": 0.010475419042770051
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 105000.0,
+       "final_value": 135323.36828822584,
+       "gain": 30323.368288225844,
+       "annual_return": 0.2769804864798337,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.043384174213171756,
+       "vs_VGT_pct": 0.018640426532954724,
+       "vs_own_etf_pct": 0.018640426532954724
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 105000.0,
+       "final_value": 134219.98599799862,
+       "gain": 29219.98599799862,
+       "annual_return": 0.26731352758479715,
+       "cash_from_buyouts": 78.15361129755286,
+       "vs_QQQ_pct": 0.03487676241657711,
+       "vs_VGT_pct": 0.010334767126428224,
+       "vs_own_etf_pct": 0.010334767126428224
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 105000.0,
+       "final_value": 134008.02408250986,
+       "gain": 29008.02408250986,
+       "annual_return": 0.2654532241136575,
+       "cash_from_buyouts": 161.6851831360801,
+       "vs_QQQ_pct": 0.03324247182098805,
+       "vs_VGT_pct": 0.008739233563131554,
+       "vs_own_etf_pct": 0.008739233563131554
+      }
+     ]
+    },
+    "2020": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 53000.0,
+       "final_value": 67926.72240348272,
+       "gain": 14926.722403482723,
+       "annual_return": 0.6095097062516628,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.006921571704824103,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 53000.0,
+       "final_value": 68400.15900868269,
+       "gain": 15400.159008682691,
+       "annual_return": 0.6302588624308816,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.006969813770606681,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 53000.0,
+       "final_value": 53000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 53000.0,
+       "final_value": 68031.36038044741,
+       "gain": 15031.360380447411,
+       "annual_return": 0.6140887443941283,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.00154045378994061,
+       "vs_VGT_pct": -0.005391780276248537,
+       "vs_own_etf_pct": 0.00154045378994061
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 53000.0,
+       "final_value": 68064.83308332543,
+       "gain": 15064.83308332543,
+       "annual_return": 0.6155543632488274,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.002033230442392453,
+       "vs_VGT_pct": -0.004902414412731093,
+       "vs_own_etf_pct": 0.002033230442392453
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 53000.0,
+       "final_value": 66711.28818324124,
+       "gain": 13711.288183241239,
+       "annual_return": 0.5566106674653384,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.017893314696119766,
+       "vs_VGT_pct": -0.024691036540237632,
+       "vs_own_etf_pct": -0.017893314696119766
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 53000.0,
+       "final_value": 67878.97841854031,
+       "gain": 14878.978418540311,
+       "annual_return": 0.6074216966843187,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0007028748517970973,
+       "vs_VGT_pct": -0.007619581557934962,
+       "vs_own_etf_pct": -0.0007028748517970973
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 53000.0,
+       "final_value": 68414.37863361994,
+       "gain": 15414.378633619941,
+       "annual_return": 0.630883298366298,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.007179151486811808,
+       "vs_VGT_pct": 0.00020788877019195517,
+       "vs_own_etf_pct": 0.007179151486811808
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 53000.0,
+       "final_value": 68656.37913844151,
+       "gain": 15656.379138441509,
+       "annual_return": 0.6415214480279785,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.010741821615131819,
+       "vs_VGT_pct": 0.0037458996217580864,
+       "vs_own_etf_pct": 0.010741821615131819
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 53000.0,
+       "final_value": 68078.61999924903,
+       "gain": 15078.61999924903,
+       "annual_return": 0.616158146748709,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0022361979261127374,
+       "vs_VGT_pct": -0.004700851783003057,
+       "vs_own_etf_pct": 0.0022361979261127374
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 53000.0,
+       "final_value": 68057.89060862649,
+       "gain": 15057.89060862649,
+       "annual_return": 0.6152503506051081,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0019310250885451463,
+       "vs_VGT_pct": -0.005003912344893169,
+       "vs_own_etf_pct": 0.0019310250885451463
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 53000.0,
+       "final_value": 68366.64820410541,
+       "gain": 15366.648204105411,
+       "annual_return": 0.6287875646432654,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.006476476194590131,
+       "vs_VGT_pct": -0.0004899229046093634,
+       "vs_own_etf_pct": -0.0004899229046093634
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 53000.0,
+       "final_value": 67270.334818138,
+       "gain": 14270.334818137999,
+       "annual_return": 0.580875487679293,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.009663171755083355,
+       "vs_VGT_pct": -0.016517859123708623,
+       "vs_own_etf_pct": -0.016517859123708623
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 53000.0,
+       "final_value": 66962.1428864997,
+       "gain": 13962.1428864997,
+       "annual_return": 0.5674846813615892,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.01420029530136091,
+       "vs_VGT_pct": -0.02102357864402693,
+       "vs_own_etf_pct": -0.02102357864402693
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 53000.0,
+       "final_value": 67159.4051359386,
+       "gain": 14159.405135938607,
+       "annual_return": 0.5760516690758251,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.011296250435672062,
+       "vs_VGT_pct": -0.018139634333110055,
+       "vs_own_etf_pct": -0.018139634333110055
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 53000.0,
+       "final_value": 67097.895357841,
+       "gain": 14097.895357841,
+       "annual_return": 0.5733788172802298,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.012201781807143819,
+       "vs_VGT_pct": -0.01903889800426317,
+       "vs_own_etf_pct": -0.01903889800426317
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 53000.0,
+       "final_value": 67359.73226244231,
+       "gain": 14359.73226244231,
+       "annual_return": 0.5847662127316479,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.008347085226231066,
+       "vs_VGT_pct": -0.015210881982135604,
+       "vs_own_etf_pct": -0.015210881982135604
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 53000.0,
+       "final_value": 67707.18081718191,
+       "gain": 14707.180817181914,
+       "annual_return": 0.5999151641963899,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0032320356191594124,
+       "vs_VGT_pct": -0.01013123655769299,
+       "vs_own_etf_pct": -0.01013123655769299
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 53000.0,
+       "final_value": 67788.02564965255,
+       "gain": 14788.025649652554,
+       "annual_return": 0.6034462811805513,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0020418584751714652,
+       "vs_VGT_pct": -0.008949297310148596,
+       "vs_own_etf_pct": -0.008949297310148596
+      }
+     ]
+    },
+    "2021": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 52000.0,
+       "final_value": 59200.626095750624,
+       "gain": 7200.626095750624,
+       "annual_return": 0.29292690592799275,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.023154568860460856,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 52000.0,
+       "final_value": 60603.88287499091,
+       "gain": 8603.882874990908,
+       "annual_return": 0.35282779092082667,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.023703411125596263,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 52000.0,
+       "final_value": 52000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 59416.23879246984,
+       "gain": 7416.238792469841,
+       "annual_return": 0.30207357918346023,
+       "cash_from_buyouts": 29.001501503935764,
+       "vs_QQQ_pct": 0.0036420678452029343,
+       "vs_VGT_pct": -0.019596831525974134,
+       "vs_own_etf_pct": 0.0036420678452029343
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 61413.396566725496,
+       "gain": 9413.396566725496,
+       "annual_return": 0.38777924529031604,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03737748427518239,
+       "vs_VGT_pct": 0.013357455881241043,
+       "vs_own_etf_pct": 0.03737748427518239
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 61795.8778373257,
+       "gain": 9795.877837325701,
+       "annual_return": 0.4043924969561998,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04383824822017157,
+       "vs_VGT_pct": 0.01966862362257471,
+       "vs_own_etf_pct": 0.04383824822017157
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 61098.86596167047,
+       "gain": 9098.865961670468,
+       "annual_return": 0.3741650790756526,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.032064523487465246,
+       "vs_VGT_pct": 0.008167514409936016,
+       "vs_own_etf_pct": 0.032064523487465246
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 61081.15724069656,
+       "gain": 9081.157240696557,
+       "annual_return": 0.3733998563348638,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.031765392850818364,
+       "vs_VGT_pct": 0.00787531001421371,
+       "vs_own_etf_pct": 0.031765392850818364
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 60832.050496195596,
+       "gain": 8832.050496195596,
+       "annual_return": 0.36265008557741474,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.027557553155034498,
+       "vs_VGT_pct": 0.0037649010324196652,
+       "vs_own_etf_pct": 0.027557553155034498
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 59837.76871596149,
+       "gain": 7837.768715961487,
+       "annual_return": 0.32001587049347885,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.010762430437481374,
+       "vs_VGT_pct": -0.012641337859650048,
+       "vs_own_etf_pct": 0.010762430437481374
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 59553.317796017735,
+       "gain": 7553.3177960177345,
+       "annual_return": 0.3078995756206769,
+       "cash_from_buyouts": 15.117401725061873,
+       "vs_QQQ_pct": 0.0059575670651974555,
+       "vs_VGT_pct": -0.017334946692115438,
+       "vs_own_etf_pct": 0.0059575670651974555
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 60941.776571154915,
+       "gain": 8941.776571154915,
+       "annual_return": 0.36738177645362113,
+       "cash_from_buyouts": 28.651337000329086,
+       "vs_QQQ_pct": 0.029411014548869296,
+       "vs_VGT_pct": 0.005575446326780531,
+       "vs_own_etf_pct": 0.005575446326780531
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 65068.33261358963,
+       "gain": 13068.332613589628,
+       "annual_return": 0.5490765118248682,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.09911561591170703,
+       "vs_VGT_pct": 0.07366606769747164,
+       "vs_own_etf_pct": 0.07366606769747164
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 62560.99108463083,
+       "gain": 10560.991084630827,
+       "annual_return": 0.4378147556889838,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05676232179445484,
+       "vs_VGT_pct": 0.032293445845324786,
+       "vs_own_etf_pct": 0.032293445845324786
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 62706.66801535388,
+       "gain": 10706.668015353876,
+       "annual_return": 0.4442067197809315,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05922305473480316,
+       "vs_VGT_pct": 0.03469720157535838,
+       "vs_own_etf_pct": 0.03469720157535838
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 62733.3335966272,
+       "gain": 10733.333596627199,
+       "annual_return": 0.4453777218567349,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.059673482087213126,
+       "vs_VGT_pct": 0.03513719947662031,
+       "vs_own_etf_pct": 0.03513719947662031
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 62371.895625237055,
+       "gain": 10371.895625237055,
+       "annual_return": 0.4295311930080357,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.053568175518232675,
+       "vs_VGT_pct": 0.02917325864900544,
+       "vs_own_etf_pct": 0.02917325864900544
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.00000000001,
+       "final_value": 61610.215456684404,
+       "gain": 9610.215456684396,
+       "annual_return": 0.3963202503580124,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04070209252578727,
+       "vs_VGT_pct": 0.01660508426117313,
+       "vs_own_etf_pct": 0.01660508426117313
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 61391.51061572419,
+       "gain": 9391.51061572419,
+       "annual_return": 0.38683053798620304,
+       "cash_from_buyouts": 8.762352189130075,
+       "vs_QQQ_pct": 0.03700779306674984,
+       "vs_VGT_pct": 0.012996324713351104,
+       "vs_own_etf_pct": 0.012996324713351104
+      }
+     ]
+    },
+    "2022": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 52000.0,
+       "final_value": 45194.64269207494,
+       "gain": -6805.357307925056,
+       "annual_return": -0.2524186516971751,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.02829831741336697,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 52000.0,
+       "final_value": 46510.820658217366,
+       "gain": -5489.179341782634,
+       "annual_return": -0.20560716807077714,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.029122433274004322,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 52000.0,
+       "final_value": 52000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 45381.766535309536,
+       "gain": -6618.233464690464,
+       "annual_return": -0.24582474004104538,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.00414039877490624,
+       "vs_VGT_pct": -0.02427508495721098,
+       "vs_own_etf_pct": 0.00414039877490624
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 40832.58676235255,
+       "gain": -11167.413237647452,
+       "annual_return": -0.40012408352583695,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.09651710180435391,
+       "vs_VGT_pct": -0.12208414763504305,
+       "vs_own_etf_pct": -0.09651710180435391
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 41425.80357215229,
+       "gain": -10574.19642784771,
+       "annual_return": -0.3807334377185941,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.08339128036924459,
+       "vs_VGT_pct": -0.1093297648612157,
+       "vs_own_etf_pct": -0.08339128036924459
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 42414.292050726646,
+       "gain": -9585.707949273354,
+       "annual_return": -0.34792527938615103,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.06151947389631296,
+       "vs_VGT_pct": -0.08807689371025884,
+       "vs_own_etf_pct": -0.06151947389631296
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 42842.77142474777,
+       "gain": -9157.22857525223,
+       "annual_return": -0.33351378691339084,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.05203871802574478,
+       "vs_VGT_pct": -0.07886442727863452,
+       "vs_own_etf_pct": -0.05203871802574478
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 43378.456050844325,
+       "gain": -8621.543949155675,
+       "annual_return": -0.3153371075406369,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.04018588339341145,
+       "vs_VGT_pct": -0.06734700792297521,
+       "vs_own_etf_pct": -0.04018588339341145
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 44757.561499386415,
+       "gain": -7242.438500613585,
+       "annual_return": -0.26774037332259004,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.009671084151865017,
+       "vs_VGT_pct": -0.03769572615617123,
+       "vs_own_etf_pct": -0.009671084151865017
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 45196.23910965031,
+       "gain": -6803.7608903496875,
+       "annual_return": -0.25236248361940505,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 3.5323159566669204e-05,
+       "vs_VGT_pct": -0.028263993839781842,
+       "vs_own_etf_pct": 3.5323159566669204e-05
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 46402.03948047712,
+       "gain": -5597.96051952288,
+       "annual_return": -0.2095139895280314,
+       "cash_from_buyouts": 99.69788439379428,
+       "vs_QQQ_pct": 0.026715484767266373,
+       "vs_VGT_pct": -0.0023388359138967196,
+       "vs_own_etf_pct": -0.0023388359138967196
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 45840.34296908121,
+       "gain": -6159.657030918788,
+       "annual_return": -0.22957889643480922,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.014287097729826614,
+       "vs_VGT_pct": -0.014415520510014823,
+       "vs_own_etf_pct": -0.014415520510014823
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 46139.307866647396,
+       "gain": -5860.692133352604,
+       "annual_return": -0.2189218938581775,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02090214942086721,
+       "vs_VGT_pct": -0.007987663651433219,
+       "vs_own_etf_pct": -0.007987663651433219
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 45978.12122037015,
+       "gain": -6021.878779629849,
+       "annual_return": -0.22467401922105462,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.017335650458247587,
+       "vs_VGT_pct": -0.011453236694354052,
+       "vs_own_etf_pct": -0.011453236694354052
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 46128.79617276003,
+       "gain": -5871.203827239973,
+       "annual_return": -0.2192974717880423,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.020669562254308715,
+       "vs_VGT_pct": -0.008213668992526069,
+       "vs_own_etf_pct": -0.008213668992526069
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 46204.94155800457,
+       "gain": -5795.058441995432,
+       "annual_return": -0.21657539474822196,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02235439436512654,
+       "vs_VGT_pct": -0.006576514795568422,
+       "vs_own_etf_pct": -0.006576514795568422
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 46317.46152683484,
+       "gain": -5682.5384731651575,
+       "annual_return": -0.21254688385774115,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.024844069294009286,
+       "vs_VGT_pct": -0.00415729347807936,
+       "vs_own_etf_pct": -0.00415729347807936
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 46287.56628459424,
+       "gain": -5712.4337154057575,
+       "annual_return": -0.21361792117242234,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.024182591728088676,
+       "vs_VGT_pct": -0.004800052341877525,
+       "vs_own_etf_pct": -0.004800052341877525
+      }
+     ]
+    },
+    "2023": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 52000.0,
+       "final_value": 62754.518820339814,
+       "gain": 10754.518820339814,
+       "annual_return": 0.44630827313854066,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": 0.0029806499171833867,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 52000.0,
+       "final_value": 62568.02544049228,
+       "gain": 10568.025440492282,
+       "annual_return": 0.43812319898051383,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.002971792045469157,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 52000.0,
+       "final_value": 52000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 62929.24290006055,
+       "gain": 10929.242900060548,
+       "annual_return": 0.45399022102796693,
+       "cash_from_buyouts": 336.63085841088645,
+       "vs_QQQ_pct": 0.0027842469834076233,
+       "vs_VGT_pct": 0.005773195766131556,
+       "vs_own_etf_pct": 0.0027842469834076233
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 64255.94042323694,
+       "gain": 12255.940423236942,
+       "annual_return": 0.5127398376011038,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.023925314560941047,
+       "vs_VGT_pct": 0.026977277464989236,
+       "vs_own_etf_pct": 0.023925314560941047
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 65061.40089369888,
+       "gain": 13061.400893698883,
+       "annual_return": 0.5487653202081134,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03676041369966443,
+       "vs_VGT_pct": 0.03985063354089746,
+       "vs_own_etf_pct": 0.03676041369966443
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 64449.75972252255,
+       "gain": 12449.759722522547,
+       "annual_return": 0.5213842204766327,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.027013845919782176,
+       "vs_VGT_pct": 0.030075014654569188,
+       "vs_own_etf_pct": 0.027013845919782176
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 64385.094086275225,
+       "gain": 12385.094086275225,
+       "annual_return": 0.5184983877023774,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02598339205824507,
+       "vs_VGT_pct": 0.029041489370815077,
+       "vs_own_etf_pct": 0.02598339205824507
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 64348.32006296763,
+       "gain": 12348.320062967628,
+       "annual_return": 0.5168580466259629,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.025397394045689525,
+       "vs_VGT_pct": 0.02845374470333195,
+       "vs_own_etf_pct": 0.025397394045689525
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 63572.55728603092,
+       "gain": 11572.557286030918,
+       "annual_return": 0.4823855992483602,
+       "cash_from_buyouts": 191.83122393187855,
+       "vs_QQQ_pct": 0.01303553084413056,
+       "vs_VGT_pct": 0.016055035115244864,
+       "vs_own_etf_pct": 0.01303553084413056
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 63140.4475821311,
+       "gain": 11140.447582131099,
+       "annual_return": 0.4632933611615626,
+       "cash_from_buyouts": 314.73809022106127,
+       "vs_QQQ_pct": 0.006149816284882315,
+       "vs_VGT_pct": 0.009148796651466062,
+       "vs_own_etf_pct": 0.006149816284882315
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 62975.03179259871,
+       "gain": 10975.031792598711,
+       "annual_return": 0.45600552551828555,
+       "cash_from_buyouts": 76.80482709180343,
+       "vs_QQQ_pct": 0.0035138979057460773,
+       "vs_VGT_pct": 0.006505021522431376,
+       "vs_own_etf_pct": 0.006505021522431376
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 63064.52452849396,
+       "gain": 11064.52452849396,
+       "annual_return": 0.45994692996379566,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.004939974267696323,
+       "vs_VGT_pct": 0.007935348518771645,
+       "vs_own_etf_pct": 0.007935348518771645
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 63286.10060455553,
+       "gain": 11286.100604555533,
+       "annual_return": 0.4697200710987121,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.008470812846762321,
+       "vs_VGT_pct": 0.011476711291555919,
+       "vs_own_etf_pct": 0.011476711291555919
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 63472.275602794994,
+       "gain": 11472.275602794994,
+       "annual_return": 0.47794777193797033,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.011437531447098692,
+       "vs_VGT_pct": 0.014452272641442665,
+       "vs_own_etf_pct": 0.014452272641442665
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 63600.43970551591,
+       "gain": 11600.439705515913,
+       "annual_return": 0.48362024752151644,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.013479840194423165,
+       "vs_VGT_pct": 0.01650066879616574,
+       "vs_own_etf_pct": 0.01650066879616574
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 63529.25649823543,
+       "gain": 11529.25649823543,
+       "annual_return": 0.4804688644680837,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.012345528138198558,
+       "vs_VGT_pct": 0.015362975752804653,
+       "vs_own_etf_pct": 0.015362975752804653
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 63308.45676086537,
+       "gain": 11308.456760865367,
+       "annual_return": 0.4707072936882945,
+       "cash_from_buyouts": 47.16757705627533,
+       "vs_QQQ_pct": 0.008827060599594816,
+       "vs_VGT_pct": 0.011834020894223363,
+       "vs_own_etf_pct": 0.011834020894223363
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 63192.024098065194,
+       "gain": 11192.024098065194,
+       "annual_return": 0.4655680692680982,
+       "cash_from_buyouts": 78.48229450274363,
+       "vs_QQQ_pct": 0.006971693607880525,
+       "vs_VGT_pct": 0.009973123703038933,
+       "vs_own_etf_pct": 0.009973123703038933
+      }
+     ]
+    },
+    "2024": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 52000.0,
+       "final_value": 57793.52518268221,
+       "gain": 5793.525182682213,
+       "annual_return": 0.22837994770642303,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.018306575978201622,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 52000.0,
+       "final_value": 58871.256309239485,
+       "gain": 6871.256309239485,
+       "annual_return": 0.27250796154183193,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.018647956205312344,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 52000.0,
+       "final_value": 52000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 58161.335972217435,
+       "gain": 6161.3359722174355,
+       "annual_return": 0.24338421055590787,
+       "cash_from_buyouts": 22.352143898509954,
+       "vs_QQQ_pct": 0.006364221396299774,
+       "vs_VGT_pct": -0.012058861684435151,
+       "vs_own_etf_pct": 0.006364221396299774
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 62436.21519112157,
+       "gain": 10436.21519112157,
+       "annual_return": 0.4219315961594809,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.08033235546307416,
+       "vs_VGT_pct": 0.06055516911607994,
+       "vs_own_etf_pct": 0.08033235546307416
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 64876.21688081373,
+       "gain": 12876.216880813728,
+       "annual_return": 0.5271436541457922,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.12255164701830368,
+       "vs_VGT_pct": 0.10200157000270771,
+       "vs_own_etf_pct": 0.12255164701830368
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 62865.19182346227,
+       "gain": 10865.191823462272,
+       "annual_return": 0.4402595727960142,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.08775492799147999,
+       "vs_VGT_pct": 0.06784185975654067,
+       "vs_own_etf_pct": 0.08775492799147999
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 61607.722548886064,
+       "gain": 9607.722548886064,
+       "annual_return": 0.38674251307801416,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.06599696685999645,
+       "vs_VGT_pct": 0.046482212393641476,
+       "vs_own_etf_pct": 0.06599696685999645
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 60847.37139832001,
+       "gain": 8847.371398320007,
+       "annual_return": 0.3546917365510298,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05284062887641383,
+       "vs_VGT_pct": 0.03356672191095034,
+       "vs_own_etf_pct": 0.05284062887641383
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 59019.75761146161,
+       "gain": 7019.7576114616095,
+       "annual_return": 0.2786271504361568,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.021217470727098675,
+       "vs_VGT_pct": 0.0025224755089661155,
+       "vs_own_etf_pct": 0.021217470727098675
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 58497.74253587514,
+       "gain": 6497.7425358751425,
+       "annual_return": 0.257158174470737,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.012185056214635503,
+       "vs_VGT_pct": -0.006344586420958032,
+       "vs_own_etf_pct": 0.012185056214635503
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 52000.0,
+       "final_value": 58769.634433656334,
+       "gain": 6769.634433656334,
+       "annual_return": 0.2683258800334512,
+       "cash_from_buyouts": 25.89488240171899,
+       "vs_QQQ_pct": 0.016889595294433013,
+       "vs_VGT_pct": -0.0017261713432672465,
+       "vs_own_etf_pct": -0.0017261713432672465
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 52000.0,
+       "final_value": 61646.52278913393,
+       "gain": 9646.522789133931,
+       "annual_return": 0.3883843363435772,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.06666832649976961,
+       "vs_VGT_pct": 0.04714128173716059,
+       "vs_own_etf_pct": 0.04714128173716059
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 52000.0,
+       "final_value": 60343.41949658685,
+       "gain": 8343.419496586852,
+       "annual_return": 0.3335790944715409,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0441207610341221,
+       "vs_VGT_pct": 0.025006484991833222,
+       "vs_own_etf_pct": 0.025006484991833222
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 52000.0,
+       "final_value": 59698.9699715562,
+       "gain": 7698.969971556202,
+       "annual_return": 0.30673333353901977,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.032969866137270154,
+       "vs_VGT_pct": 0.014059724799635687,
+       "vs_own_etf_pct": 0.014059724799635687
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 52000.0,
+       "final_value": 59101.31191830922,
+       "gain": 7101.31191830922,
+       "annual_return": 0.2819916649404722,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.022628602970543144,
+       "vs_VGT_pct": 0.003907774752780924,
+       "vs_own_etf_pct": 0.003907774752780924
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 52000.0,
+       "final_value": 58900.01405211803,
+       "gain": 6900.014052118029,
+       "annual_return": 0.2736922333734887,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.019145550750508278,
+       "vs_VGT_pct": 0.0004884852928479511,
+       "vs_own_etf_pct": 0.0004884852928479511
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 52000.0,
+       "final_value": 58813.02797472455,
+       "gain": 6813.027974724551,
+       "annual_return": 0.2701111345731646,
+       "cash_from_buyouts": 3.028018153791234,
+       "vs_QQQ_pct": 0.01764043270971527,
+       "vs_VGT_pct": -0.0009890791901751017,
+       "vs_own_etf_pct": -0.0009890791901751017
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 52000.0,
+       "final_value": 58742.393831041285,
+       "gain": 6742.393831041285,
+       "annual_return": 0.2672055818891099,
+       "cash_from_buyouts": 28.976685116367257,
+       "vs_QQQ_pct": 0.016418251791351146,
+       "vs_VGT_pct": -0.0021888861606980115,
+       "vs_own_etf_pct": -0.0021888861606980115
+      }
+     ]
+    },
+    "2025": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 53000.0,
+       "final_value": 59897.869777250955,
+       "gain": 6897.869777250955,
+       "annual_return": 0.27198337943779505,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.020591823783334906,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 53000.0,
+       "final_value": 61157.20823225017,
+       "gain": 8157.2082322501665,
+       "annual_return": 0.3238511402098009,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02102476197705294,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 53000.0,
+       "final_value": 53000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 53000.0,
+       "final_value": 60087.98114119893,
+       "gain": 7087.9811411989285,
+       "annual_return": 0.2797714515616703,
+       "cash_from_buyouts": 32.162997364826374,
+       "vs_QQQ_pct": 0.003173925294087443,
+       "vs_VGT_pct": -0.017483255399604714,
+       "vs_own_etf_pct": 0.003173925294087443
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 53000.0,
+       "final_value": 61781.35273412703,
+       "gain": 8781.352734127031,
+       "annual_return": 0.34979776144927144,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03144490720421933,
+       "vs_VGT_pct": 0.010205575432852054,
+       "vs_own_etf_pct": 0.03144490720421933
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 53000.0,
+       "final_value": 61506.102445430864,
+       "gain": 8506.102445430864,
+       "annual_return": 0.33833574474299805,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.026849580363385694,
+       "vs_VGT_pct": 0.0057048747525514365,
+       "vs_own_etf_pct": 0.026849580363385694
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 53000.0,
+       "final_value": 61405.25573432766,
+       "gain": 8405.255734327657,
+       "annual_return": 0.33414394085113996,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.025165935995426825,
+       "vs_VGT_pct": 0.004055899692731346,
+       "vs_own_etf_pct": 0.025165935995426825
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 53000.0,
+       "final_value": 60994.72997839566,
+       "gain": 7994.729978395662,
+       "annual_return": 0.317122636978467,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.018312173792218722,
+       "vs_VGT_pct": -0.0026567310469353123,
+       "vs_own_etf_pct": 0.018312173792218722
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 53000.0,
+       "final_value": 60967.87452293071,
+       "gain": 7967.87452293071,
+       "annual_return": 0.31601154407650056,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.017863819692735428,
+       "vs_VGT_pct": -0.003095852717809544,
+       "vs_own_etf_pct": 0.017863819692735428
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 53000.0,
+       "final_value": 60954.42583951936,
+       "gain": 7954.425839519361,
+       "annual_return": 0.3154552413612695,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.017639292786163274,
+       "vs_VGT_pct": -0.003315756205886977,
+       "vs_own_etf_pct": 0.017639292786163274
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 53000.0,
+       "final_value": 60287.812398723014,
+       "gain": 7287.812398723014,
+       "annual_return": 0.28797386971003575,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.006510125033197145,
+       "vs_VGT_pct": -0.014215754097628874,
+       "vs_own_etf_pct": 0.006510125033197145
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 53000.00000000001,
+       "final_value": 61367.67478717036,
+       "gain": 8367.674787170356,
+       "annual_return": 0.33258290228521264,
+       "cash_from_buyouts": 80.26369411746106,
+       "vs_QQQ_pct": 0.024538518905352413,
+       "vs_VGT_pct": 0.003441402264814375,
+       "vs_own_etf_pct": 0.003441402264814375
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 53000.0,
+       "final_value": 61909.291594077695,
+       "gain": 8909.291594077695,
+       "annual_return": 0.35513581527911536,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03358085728769389,
+       "vs_VGT_pct": 0.012297542408597595,
+       "vs_own_etf_pct": 0.012297542408597595
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 53000.0,
+       "final_value": 61626.22367312407,
+       "gain": 8626.22367312407,
+       "annual_return": 0.34333408806370636,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.028855014415379854,
+       "vs_VGT_pct": 0.00766901325993774,
+       "vs_own_etf_pct": 0.00766901325993774
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 53000.0,
+       "final_value": 61259.56194139387,
+       "gain": 8259.56194139387,
+       "annual_return": 0.3280953051433094,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0227335658047072,
+       "vs_VGT_pct": 0.001673616440355019,
+       "vs_own_etf_pct": 0.001673616440355019
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 53000.0,
+       "final_value": 61710.75125373853,
+       "gain": 8710.751253738526,
+       "annual_return": 0.34685484606197436,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.030266209520127152,
+       "vs_VGT_pct": 0.009051149283764381,
+       "vs_own_etf_pct": 0.009051149283764381
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 53000.0,
+       "final_value": 62359.5493326457,
+       "gain": 9359.5493326457,
+       "annual_return": 0.3739743862944277,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04109794830015279,
+       "vs_VGT_pct": 0.019659842807564498,
+       "vs_own_etf_pct": 0.019659842807564498
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 53000.0,
+       "final_value": 61746.338377638865,
+       "gain": 8746.338377638865,
+       "annual_return": 0.34833798998113974,
+       "cash_from_buyouts": 37.18023907300751,
+       "vs_QQQ_pct": 0.030860339562358785,
+       "vs_VGT_pct": 0.009633045104861848,
+       "vs_own_etf_pct": 0.009633045104861848
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 53000.0,
+       "final_value": 61488.04226290326,
+       "gain": 8488.042262903262,
+       "annual_return": 0.33758475059944804,
+       "cash_from_buyouts": 51.69898497424572,
+       "vs_QQQ_pct": 0.026548064089188195,
+       "vs_VGT_pct": 0.005409567248340075,
+       "vs_own_etf_pct": 0.005409567248340075
+      }
+     ]
+    }
+   }
+  },
+  "growing": {
+   "label": "$1,000 a week in 2020, 15% more each year",
+   "periods": {
+    "2020-2025": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 458205.7559374999,
+       "final_value": 772541.8924386713,
+       "gain": 314336.1365011714,
+       "annual_return": 0.20000684594463808,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.05169860622508771,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 458205.7559374999,
+       "final_value": 814658.6069681987,
+       "gain": 356452.85103069874,
+       "annual_return": 0.2203078089938514,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05451706236483589,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 458205.7559374999,
+       "final_value": 458205.7559374999,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 458205.7559374999,
+       "final_value": 815489.7173169582,
+       "gain": 357283.9613794583,
+       "annual_return": 0.22069795125839217,
+       "cash_from_buyouts": 4038.020722771766,
+       "vs_QQQ_pct": 0.05559287502547483,
+       "vs_VGT_pct": 0.001020194645524608,
+       "vs_own_etf_pct": 0.05559287502547483
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 458205.7559374999,
+       "final_value": 834447.5638025353,
+       "gain": 376241.8078650354,
+       "annual_return": 0.22949291665816257,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.08013244585150892,
+       "vs_VGT_pct": 0.024291103862490893,
+       "vs_own_etf_pct": 0.08013244585150892
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 458205.7559374999,
+       "final_value": 942827.996051129,
+       "gain": 484622.240113629,
+       "annual_return": 0.27630925637170517,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.22042313210344888,
+       "vs_VGT_pct": 0.15732895716884454,
+       "vs_own_etf_pct": 0.22042313210344888
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 458205.7559374999,
+       "final_value": 916301.3190494478,
+       "gain": 458095.56311194785,
+       "annual_return": 0.26535363649553606,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.18608625372660792,
+       "vs_VGT_pct": 0.12476724754620672,
+       "vs_own_etf_pct": 0.18608625372660792
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 458205.7559374999,
+       "final_value": 903612.0071754153,
+       "gain": 445406.25123791536,
+       "annual_return": 0.26000374005825777,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.16966085078311655,
+       "vs_VGT_pct": 0.10919101504157935,
+       "vs_own_etf_pct": 0.16966085078311655
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 458205.7559374999,
+       "final_value": 884768.6371780226,
+       "gain": 426562.8812405227,
+       "annual_return": 0.25192306827142813,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.1452694615499579,
+       "vs_VGT_pct": 0.08606062663566849,
+       "vs_own_etf_pct": 0.1452694615499579
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 458205.7559374999,
+       "final_value": 851710.7220442018,
+       "gain": 393504.9661067019,
+       "annual_return": 0.2373331564531544,
+       "cash_from_buyouts": 1624.3941603457622,
+       "vs_QQQ_pct": 0.10247836444910385,
+       "vs_VGT_pct": 0.04548176961377082,
+       "vs_own_etf_pct": 0.10247836444910385
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 458205.7559374999,
+       "final_value": 828087.0762141781,
+       "gain": 369881.3202766782,
+       "annual_return": 0.22656416676142568,
+       "cash_from_buyouts": 2329.145290878111,
+       "vs_QQQ_pct": 0.07189925144404552,
+       "vs_VGT_pct": 0.016483554130673594,
+       "vs_own_etf_pct": 0.07189925144404552
+      }
+     ],
+     "QQQ_estimated_exposure": {
+      "ALL": {
+       "ALXN": {
+        "dollars_bought": 218.93517480758868,
+        "end_value": 435.3637332426418,
+        "error_rate_used": 0.1006566797345887,
+        "max_error_dollars": 43.8222678650595,
+        "anchors": 8,
+        "worst_leave_one_out": 0.1006566797345887
+       },
+       "WBA": {
+        "dollars_bought": 836.2832176685079,
+        "end_value": 316.9361903379287,
+        "error_rate_used": 0.20187522699171412,
+        "max_error_dollars": 63.98156536635846,
+        "anchors": 20,
+        "worst_leave_one_out": 0.20187522699171412
+       },
+       "MXIM": {
+        "dollars_bought": 167.09195448389946,
+        "end_value": 377.6727456312997,
+        "error_rate_used": 0.07157584671870154,
+        "max_error_dollars": 27.032246551137064,
+        "anchors": 15,
+        "worst_leave_one_out": 0.07157584671870154
+       },
+       "XLNX": {
+        "dollars_bought": 318.174315724762,
+        "end_value": 929.6866492369405,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 67.79234959959675,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CERN": {
+        "dollars_bought": 219.919790151944,
+        "end_value": 280.62130148155876,
+        "error_rate_used": 0.0655623569874183,
+        "max_error_dollars": 18.398193946007893,
+        "anchors": 9,
+        "worst_leave_one_out": 0.0655623569874183
+       },
+       "CTXS": {
+        "dollars_bought": 88.13714099421162,
+        "end_value": 68.87488025610712,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 23.553777238086834,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "ATVI": {
+        "dollars_bought": 1172.8225462777154,
+        "end_value": 1398.5739108546934,
+        "error_rate_used": 0.2928620965694628,
+        "max_error_dollars": 409.5892877402585,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2928620965694628
+       },
+       "SGEN": {
+        "dollars_bought": 647.7877376288557,
+        "end_value": 896.9482582253422,
+        "error_rate_used": 0.2860502825299214,
+        "max_error_dollars": 256.57230268008,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2860502825299214
+       },
+       "SPLK": {
+        "dollars_bought": 373.42491897708913,
+        "end_value": 427.98121911452387,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 89.0692982508438,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "ANSS": {
+        "dollars_bought": 864.6999730958036,
+        "end_value": 994.7083462261149,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 163.3536141999208,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       },
+       "EA": {
+        "dollars_bought": 1288.5489516271452,
+        "end_value": 1937.8629801029767,
+        "error_rate_used": 0.12242612212855941,
+        "max_error_dollars": 237.24504987050113,
+        "anchors": 26,
+        "worst_leave_one_out": 0.12242612212855941
+       }
+      },
+      "5": {},
+      "10": {},
+      "15": {},
+      "20": {},
+      "25": {},
+      "50": {
+       "WBA": {
+        "dollars_bought": 152.88369122255978,
+        "end_value": 46.04939342341679,
+        "error_rate_used": 0.20187522699171412,
+        "max_error_dollars": 9.296231750183011,
+        "anchors": 20,
+        "worst_leave_one_out": 0.20187522699171412
+       },
+       "XLNX": {
+        "dollars_bought": 9.484178521863683,
+        "end_value": 16.156204636284308,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 1.178103475837342,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "ATVI": {
+        "dollars_bought": 1328.249593037298,
+        "end_value": 1578.344766922344,
+        "error_rate_used": 0.2928620965694628,
+        "max_error_dollars": 462.2373575503178,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2928620965694628
+       },
+       "EA": {
+        "dollars_bought": 94.48488228760077,
+        "end_value": 162.33689496947935,
+        "error_rate_used": 0.12242612212855941,
+        "max_error_dollars": 19.874276529504602,
+        "anchors": 26,
+        "worst_leave_one_out": 0.12242612212855941
+       }
+      },
+      "75": {
+       "ALXN": {
+        "dollars_bought": 117.40669759805553,
+        "end_value": 235.49299854696042,
+        "error_rate_used": 0.1006566797345887,
+        "max_error_dollars": 23.703943334479355,
+        "anchors": 8,
+        "worst_leave_one_out": 0.1006566797345887
+       },
+       "WBA": {
+        "dollars_bought": 607.4062694190193,
+        "end_value": 192.5866502486115,
+        "error_rate_used": 0.20187522699171412,
+        "max_error_dollars": 38.878473734512305,
+        "anchors": 20,
+        "worst_leave_one_out": 0.20187522699171412
+       },
+       "XLNX": {
+        "dollars_bought": 152.25372693889076,
+        "end_value": 406.0580618034975,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 29.609578782389995,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CERN": {
+        "dollars_bought": 40.321427673109966,
+        "end_value": 54.225735858483006,
+        "error_rate_used": 0.0655623569874183,
+        "max_error_dollars": 3.5551670522593124,
+        "anchors": 9,
+        "worst_leave_one_out": 0.0655623569874183
+       },
+       "ATVI": {
+        "dollars_bought": 1237.1846571372248,
+        "end_value": 1475.155237201594,
+        "error_rate_used": 0.2928620965694628,
+        "max_error_dollars": 432.0170555322821,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2928620965694628
+       },
+       "SGEN": {
+        "dollars_bought": 341.4544857307666,
+        "end_value": 419.84901883686507,
+        "error_rate_used": 0.2860502825299214,
+        "max_error_dollars": 120.09793045819553,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2860502825299214
+       },
+       "SPLK": {
+        "dollars_bought": 130.74191794292022,
+        "end_value": 115.84559971948335,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 24.10920342208159,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "ANSS": {
+        "dollars_bought": 22.954971098979726,
+        "end_value": 29.408120007965177,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 4.829478618885639,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       },
+       "EA": {
+        "dollars_bought": 682.0780794083853,
+        "end_value": 1030.77262776866,
+        "error_rate_used": 0.12242612212855941,
+        "max_error_dollars": 126.19349561398208,
+        "anchors": 26,
+        "worst_leave_one_out": 0.12242612212855941
+       }
+      }
+     },
+     "QQQ_replica_cashed_out": [],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 458205.7559374999,
+       "final_value": 835039.5137726747,
+       "gain": 376833.7578351748,
+       "annual_return": 0.22976437325648252,
+       "cash_from_buyouts": 3037.5151905315847,
+       "vs_QQQ_pct": 0.08089868257722332,
+       "vs_VGT_pct": 0.02501772721744744,
+       "vs_own_etf_pct": 0.02501772721744744
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 458205.7559374999,
+       "final_value": 905514.1584204655,
+       "gain": 447308.4024829656,
+       "annual_return": 0.26081032783527014,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.17212304896766528,
+       "vs_VGT_pct": 0.11152592101173675,
+       "vs_own_etf_pct": 0.11152592101173675
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 458205.7559374999,
+       "final_value": 892147.2872210656,
+       "gain": 433941.5312835657,
+       "annual_return": 0.25510703196504814,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.1548205941361156,
+       "vs_VGT_pct": 0.0951179789792509,
+       "vs_own_etf_pct": 0.0951179789792509
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 458205.7559374999,
+       "final_value": 888224.0351001293,
+       "gain": 430018.2791626294,
+       "annual_return": 0.2534173109429127,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.14974222601221787,
+       "vs_VGT_pct": 0.09030215540925646,
+       "vs_own_etf_pct": 0.09030215540925646
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 458205.7559374999,
+       "final_value": 880349.9589856482,
+       "gain": 422144.2030481483,
+       "annual_return": 0.25000397136985764,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.13954979995539252,
+       "vs_VGT_pct": 0.08063666357362131,
+       "vs_own_etf_pct": 0.08063666357362131
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 458205.7559374999,
+       "final_value": 879998.0286145008,
+       "gain": 421792.27267700084,
+       "annual_return": 0.24985071993404975,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.13909425136366949,
+       "vs_VGT_pct": 0.080204666209158,
+       "vs_own_etf_pct": 0.080204666209158
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 458205.7559374999,
+       "final_value": 859060.1500247295,
+       "gain": 400854.3940872296,
+       "annual_return": 0.24062394886208233,
+       "cash_from_buyouts": 746.5780421126015,
+       "vs_QQQ_pct": 0.1119916711739053,
+       "vs_VGT_pct": 0.05450325164030856,
+       "vs_own_etf_pct": 0.05450325164030856
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 458205.7559374999,
+       "final_value": 848546.9979105088,
+       "gain": 390341.24197300884,
+       "annual_return": 0.23590801471548423,
+       "cash_from_buyouts": 1799.4338913053753,
+       "vs_QQQ_pct": 0.09838315075951831,
+       "vs_VGT_pct": 0.04159827276413108,
+       "vs_own_etf_pct": 0.04159827276413108
+      }
+     ],
+     "VGT_estimated_exposure": {
+      "ALL": {
+       "WORK": {
+        "dollars_bought": 76.00553216280707,
+        "end_value": 88.14834197413202,
+        "error_rate_used": 0.21738464817333636,
+        "max_error_dollars": 19.16209630710963,
+        "anchors": 4,
+        "worst_leave_one_out": 0.21738464817333636
+       },
+       "MXIM": {
+        "dollars_bought": 209.27809999337762,
+        "end_value": 477.5943301653163,
+        "error_rate_used": 0.07157584671870154,
+        "max_error_dollars": 34.184218569633614,
+        "anchors": 15,
+        "worst_leave_one_out": 0.07157584671870154
+       },
+       "XLNX": {
+        "dollars_bought": 391.429400895462,
+        "end_value": 1159.3878860761147,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 84.54206474721352,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "NUAN": {
+        "dollars_bought": 143.60929652561853,
+        "end_value": 206.15530249696917,
+        "error_rate_used": 0.1668720237830672,
+        "max_error_dollars": 34.401552541279656,
+        "anchors": 10,
+        "worst_leave_one_out": 0.1668720237830672
+       },
+       "CTXS": {
+        "dollars_bought": 243.95672796083986,
+        "end_value": 217.29912694740443,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 74.31178408032274,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "ZEN": {
+        "dollars_bought": 212.8806261706141,
+        "end_value": 160.4448489727618,
+        "error_rate_used": 0.26823892973883634,
+        "max_error_dollars": 43.03755457056286,
+        "anchors": 12,
+        "worst_leave_one_out": 0.26823892973883634
+       },
+       "COUP": {
+        "dollars_bought": 245.14395087590356,
+        "end_value": 112.86317601802112,
+        "error_rate_used": 0.18440903060161484,
+        "max_error_dollars": 20.8129888801027,
+        "anchors": 14,
+        "worst_leave_one_out": 0.18440903060161484
+       },
+       "VMW": {
+        "dollars_bought": 517.3135795303012,
+        "end_value": 465.14396056536066,
+        "error_rate_used": 0.2281167125244079,
+        "max_error_dollars": 106.1071111347529,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2281167125244079
+       },
+       "SPLK": {
+        "dollars_bought": 599.4429935616987,
+        "end_value": 710.6147898463478,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 147.88957512957631,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "JNPR": {
+        "dollars_bought": 428.77581448826055,
+        "end_value": 558.7422190168855,
+        "error_rate_used": 0.11703502332581073,
+        "max_error_dollars": 65.39240863575644,
+        "anchors": 23,
+        "worst_leave_one_out": 0.11703502332581073
+       },
+       "ANSS": {
+        "dollars_bought": 1044.4736432783538,
+        "end_value": 1200.2805297899286,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 197.11321749622707,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       }
+      },
+      "5": {},
+      "10": {},
+      "15": {},
+      "20": {},
+      "25": {},
+      "50": {
+       "XLNX": {
+        "dollars_bought": 448.25178840952265,
+        "end_value": 1324.7571164203746,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 96.60071771992834,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CTXS": {
+        "dollars_bought": 34.9789013633845,
+        "end_value": 26.592075671132292,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 9.093937068597091,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "VMW": {
+        "dollars_bought": 173.68912371208077,
+        "end_value": 130.82295349035095,
+        "error_rate_used": 0.2281167125244079,
+        "max_error_dollars": 29.842902072952374,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2281167125244079
+       },
+       "SPLK": {
+        "dollars_bought": 255.18090419468103,
+        "end_value": 235.80785667437695,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 49.075144838077655,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "ANSS": {
+        "dollars_bought": 642.5691724298285,
+        "end_value": 734.5557764005845,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 120.63067668197483,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       }
+      },
+      "75": {
+       "WORK": {
+        "dollars_bought": 20.258288044788678,
+        "end_value": 21.94519901334733,
+        "error_rate_used": 0.21738464817333636,
+        "max_error_dollars": 4.770549366610358,
+        "anchors": 4,
+        "worst_leave_one_out": 0.21738464817333636
+       },
+       "MXIM": {
+        "dollars_bought": 228.059536998662,
+        "end_value": 519.3329306607188,
+        "error_rate_used": 0.07157584671870154,
+        "max_error_dollars": 37.17169424094567,
+        "anchors": 15,
+        "worst_leave_one_out": 0.07157584671870154
+       },
+       "XLNX": {
+        "dollars_bought": 426.54424673501387,
+        "end_value": 1261.48898821559,
+        "error_rate_used": 0.0729195688194928,
+        "max_error_dollars": 91.98723309121905,
+        "anchors": 19,
+        "worst_leave_one_out": 0.0729195688194928
+       },
+       "CTXS": {
+        "dollars_bought": 113.42216193735744,
+        "end_value": 88.11346778815167,
+        "error_rate_used": 0.3419792114411455,
+        "max_error_dollars": 30.132974231536885,
+        "anchors": 17,
+        "worst_leave_one_out": 0.3419792114411455
+       },
+       "ZEN": {
+        "dollars_bought": 7.334557264337736,
+        "end_value": 4.347191289273317,
+        "error_rate_used": 0.26823892973883634,
+        "max_error_dollars": 1.1660859388046667,
+        "anchors": 12,
+        "worst_leave_one_out": 0.26823892973883634
+       },
+       "COUP": {
+        "dollars_bought": 128.99043597782904,
+        "end_value": 34.877157500223696,
+        "error_rate_used": 0.18440903060161484,
+        "max_error_dollars": 6.431662804756092,
+        "anchors": 14,
+        "worst_leave_one_out": 0.18440903060161484
+       },
+       "VMW": {
+        "dollars_bought": 453.27045987288335,
+        "end_value": 406.96133081794557,
+        "error_rate_used": 0.2281167125244079,
+        "max_error_dollars": 92.83468091074775,
+        "anchors": 16,
+        "worst_leave_one_out": 0.2281167125244079
+       },
+       "SPLK": {
+        "dollars_bought": 561.2257346117215,
+        "end_value": 616.7206155395561,
+        "error_rate_used": 0.20811496923889472,
+        "max_error_dollars": 128.34879193200695,
+        "anchors": 31,
+        "worst_leave_one_out": 0.20811496923889472
+       },
+       "JNPR": {
+        "dollars_bought": 7.359601453723133,
+        "end_value": 8.163437249495137,
+        "error_rate_used": 0.11703502332581073,
+        "max_error_dollars": 0.9554080689134555,
+        "anchors": 23,
+        "worst_leave_one_out": 0.11703502332581073
+       },
+       "ANSS": {
+        "dollars_bought": 1154.6791952836627,
+        "end_value": 1325.610892856439,
+        "error_rate_used": 0.16422262346513739,
+        "max_error_dollars": 217.69529851884755,
+        "anchors": 46,
+        "worst_leave_one_out": 0.16422262346513739
+       }
+      }
+     },
+     "VGT_replica_cashed_out": []
+    },
+    "2024-2025": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 197550.25593749987,
+       "final_value": 242554.40684746503,
+       "gain": 45004.15090996516,
+       "annual_return": 0.22879500551822698,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.02351316689807814,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 197550.25593749987,
+       "final_value": 248394.9589744731,
+       "gain": 50844.703036973224,
+       "annual_return": 0.25738005183564544,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.024079348641482312,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 197550.25593749993,
+       "final_value": 197550.25593749993,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 197550.25593749993,
+       "final_value": 243319.84083183762,
+       "gain": 45769.58489433769,
+       "annual_return": 0.2325547373075101,
+       "cash_from_buyouts": 265.0952337576766,
+       "vs_QQQ_pct": 0.003155720789908889,
+       "vs_VGT_pct": -0.020431647097786,
+       "vs_own_etf_pct": 0.003155720789908889
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 197550.25593749993,
+       "final_value": 257003.1786297588,
+       "gain": 59452.92269225887,
+       "annual_return": 0.29908643314682615,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0595691992163232,
+       "vs_VGT_pct": 0.03465537179508682,
+       "vs_own_etf_pct": 0.0595691992163232
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 197550.25593749993,
+       "final_value": 264813.95959303057,
+       "gain": 67263.70365553064,
+       "annual_return": 0.3365055427608891,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.09177138042915,
+       "vs_VGT_pct": 0.06610037774657429,
+       "vs_own_etf_pct": 0.09177138042915
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 197550.25593749993,
+       "final_value": 258770.57455499636,
+       "gain": 61220.318617496436,
+       "annual_return": 0.30758826683561646,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.06685579502882089,
+       "vs_VGT_pct": 0.04177063666412639,
+       "vs_own_etf_pct": 0.06685579502882089
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 197550.25593749993,
+       "final_value": 254285.9269138326,
+       "gain": 56735.67097633268,
+       "annual_return": 0.28597517339597595,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04836655090643305,
+       "vs_VGT_pct": 0.023716133224607416,
+       "vs_own_etf_pct": 0.04836655090643305
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 197550.25593749993,
+       "final_value": 252239.58942955505,
+       "gain": 54689.33349205513,
+       "annual_return": 0.27606869154913893,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.039929938639213125,
+       "vs_VGT_pct": 0.015477892429681228,
+       "vs_own_etf_pct": 0.039929938639213125
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 197550.25593749993,
+       "final_value": 249227.95065543478,
+       "gain": 51677.69471793485,
+       "annual_return": 0.26143773396294323,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02751359538137166,
+       "vs_VGT_pct": 0.0033534967231250157,
+       "vs_own_etf_pct": 0.02751359538137166
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 197550.25593749993,
+       "final_value": 244917.6116533967,
+       "gain": 47367.35571589679,
+       "annual_return": 0.2403896161751014,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.00974298853872324,
+       "vs_VGT_pct": -0.013999266874951899,
+       "vs_own_etf_pct": 0.00974298853872324
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 197550.25593749993,
+       "final_value": 249246.2782838671,
+       "gain": 51696.02234636719,
+       "annual_return": 0.2615269584918546,
+       "cash_from_buyouts": 454.00093374211144,
+       "vs_QQQ_pct": 0.027589156277875393,
+       "vs_VGT_pct": 0.003427280943658406,
+       "vs_own_etf_pct": 0.003427280943658406
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 197550.25593749995,
+       "final_value": 256198.17200723122,
+       "gain": 58647.91606973126,
+       "annual_return": 0.29520722722053583,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05625032889361736,
+       "vs_VGT_pct": 0.031414538624191746,
+       "vs_own_etf_pct": 0.031414538624191746
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 197550.25593749993,
+       "final_value": 251565.93633666655,
+       "gain": 54015.680399166624,
+       "annual_return": 0.27280132447299965,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03715261085678234,
+       "vs_VGT_pct": 0.01276586841892935,
+       "vs_own_etf_pct": 0.01276586841892935
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 197550.25593749993,
+       "final_value": 248963.70516618155,
+       "gain": 51413.449228681624,
+       "annual_return": 0.2601510508220122,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02642416768270528,
+       "vs_VGT_pct": 0.0022896849197608926,
+       "vs_own_etf_pct": 0.0022896849197608926
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 197550.25593749995,
+       "final_value": 250974.1483467508,
+       "gain": 53423.89240925084,
+       "annual_return": 0.2699284920859072,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.034712795404210794,
+       "vs_VGT_pct": 0.010383420754294548,
+       "vs_own_etf_pct": 0.010383420754294548
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 197550.25593749993,
+       "final_value": 253041.50313665584,
+       "gain": 55491.247199155914,
+       "annual_return": 0.27995416656718514,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04323605753238624,
+       "vs_VGT_pct": 0.018706273997534106,
+       "vs_own_etf_pct": 0.018706273997534106
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 197550.25593749993,
+       "final_value": 250950.80414597783,
+       "gain": 53400.54820847791,
+       "annual_return": 0.269815119169603,
+       "cash_from_buyouts": 146.44542519676818,
+       "vs_QQQ_pct": 0.03461655225168947,
+       "vs_VGT_pct": 0.010289440583081122,
+       "vs_own_etf_pct": 0.010289440583081122
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 197550.25593749993,
+       "final_value": 250512.31720317245,
+       "gain": 52962.06126567253,
+       "annual_return": 0.2676848871642453,
+       "cash_from_buyouts": 296.35167301319063,
+       "vs_QQQ_pct": 0.03280876426504964,
+       "vs_VGT_pct": 0.008524159417087729,
+       "vs_own_etf_pct": 0.008524159417087729
+      }
+     ]
+    },
+    "2020": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 53000.0,
+       "final_value": 67926.72240348272,
+       "gain": 14926.722403482723,
+       "annual_return": 0.6095097062516628,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.006921571704824103,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 53000.0,
+       "final_value": 68400.15900868269,
+       "gain": 15400.159008682691,
+       "annual_return": 0.6302588624308816,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.006969813770606681,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 53000.0,
+       "final_value": 53000.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 53000.0,
+       "final_value": 68031.36038044741,
+       "gain": 15031.360380447411,
+       "annual_return": 0.6140887443941283,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.00154045378994061,
+       "vs_VGT_pct": -0.005391780276248537,
+       "vs_own_etf_pct": 0.00154045378994061
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 53000.0,
+       "final_value": 68064.83308332543,
+       "gain": 15064.83308332543,
+       "annual_return": 0.6155543632488274,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.002033230442392453,
+       "vs_VGT_pct": -0.004902414412731093,
+       "vs_own_etf_pct": 0.002033230442392453
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 53000.0,
+       "final_value": 66711.28818324124,
+       "gain": 13711.288183241239,
+       "annual_return": 0.5566106674653384,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.017893314696119766,
+       "vs_VGT_pct": -0.024691036540237632,
+       "vs_own_etf_pct": -0.017893314696119766
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 53000.0,
+       "final_value": 67878.97841854031,
+       "gain": 14878.978418540311,
+       "annual_return": 0.6074216966843187,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0007028748517970973,
+       "vs_VGT_pct": -0.007619581557934962,
+       "vs_own_etf_pct": -0.0007028748517970973
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 53000.0,
+       "final_value": 68414.37863361994,
+       "gain": 15414.378633619941,
+       "annual_return": 0.630883298366298,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.007179151486811808,
+       "vs_VGT_pct": 0.00020788877019195517,
+       "vs_own_etf_pct": 0.007179151486811808
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 53000.0,
+       "final_value": 68656.37913844151,
+       "gain": 15656.379138441509,
+       "annual_return": 0.6415214480279785,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.010741821615131819,
+       "vs_VGT_pct": 0.0037458996217580864,
+       "vs_own_etf_pct": 0.010741821615131819
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 53000.0,
+       "final_value": 68078.61999924903,
+       "gain": 15078.61999924903,
+       "annual_return": 0.616158146748709,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0022361979261127374,
+       "vs_VGT_pct": -0.004700851783003057,
+       "vs_own_etf_pct": 0.0022361979261127374
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 53000.0,
+       "final_value": 68057.89060862649,
+       "gain": 15057.89060862649,
+       "annual_return": 0.6152503506051081,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0019310250885451463,
+       "vs_VGT_pct": -0.005003912344893169,
+       "vs_own_etf_pct": 0.0019310250885451463
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 53000.0,
+       "final_value": 68366.64820410541,
+       "gain": 15366.648204105411,
+       "annual_return": 0.6287875646432654,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.006476476194590131,
+       "vs_VGT_pct": -0.0004899229046093634,
+       "vs_own_etf_pct": -0.0004899229046093634
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 53000.0,
+       "final_value": 67270.334818138,
+       "gain": 14270.334818137999,
+       "annual_return": 0.580875487679293,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.009663171755083355,
+       "vs_VGT_pct": -0.016517859123708623,
+       "vs_own_etf_pct": -0.016517859123708623
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 53000.0,
+       "final_value": 66962.1428864997,
+       "gain": 13962.1428864997,
+       "annual_return": 0.5674846813615892,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.01420029530136091,
+       "vs_VGT_pct": -0.02102357864402693,
+       "vs_own_etf_pct": -0.02102357864402693
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 53000.0,
+       "final_value": 67159.4051359386,
+       "gain": 14159.405135938607,
+       "annual_return": 0.5760516690758251,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.011296250435672062,
+       "vs_VGT_pct": -0.018139634333110055,
+       "vs_own_etf_pct": -0.018139634333110055
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 53000.0,
+       "final_value": 67097.895357841,
+       "gain": 14097.895357841,
+       "annual_return": 0.5733788172802298,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.012201781807143819,
+       "vs_VGT_pct": -0.01903889800426317,
+       "vs_own_etf_pct": -0.01903889800426317
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 53000.0,
+       "final_value": 67359.73226244231,
+       "gain": 14359.73226244231,
+       "annual_return": 0.5847662127316479,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.008347085226231066,
+       "vs_VGT_pct": -0.015210881982135604,
+       "vs_own_etf_pct": -0.015210881982135604
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 53000.0,
+       "final_value": 67707.18081718191,
+       "gain": 14707.180817181914,
+       "annual_return": 0.5999151641963899,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0032320356191594124,
+       "vs_VGT_pct": -0.01013123655769299,
+       "vs_own_etf_pct": -0.01013123655769299
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 53000.0,
+       "final_value": 67788.02564965255,
+       "gain": 14788.025649652554,
+       "annual_return": 0.6034462811805513,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0020418584751714652,
+       "vs_VGT_pct": -0.008949297310148596,
+       "vs_own_etf_pct": -0.008949297310148596
+      }
+     ]
+    },
+    "2021": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 59800.0,
+       "final_value": 68080.72001011322,
+       "gain": 8280.720010113218,
+       "annual_return": 0.29292690592799286,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.023154568860460967,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 59800.0,
+       "final_value": 69694.46530623955,
+       "gain": 9894.465306239552,
+       "annual_return": 0.3528277909208265,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.023703411125596485,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 59800.0,
+       "final_value": 59800.0,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 59800.0,
+       "final_value": 68328.67461134029,
+       "gain": 8528.674611340291,
+       "annual_return": 0.30207357918345945,
+       "cash_from_buyouts": 33.35172672952613,
+       "vs_QQQ_pct": 0.00364206784520249,
+       "vs_VGT_pct": -0.01959683152597458,
+       "vs_own_etf_pct": 0.00364206784520249
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 59800.0,
+       "final_value": 70625.40605173432,
+       "gain": 10825.406051734317,
+       "annual_return": 0.38777924529031604,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03737748427518239,
+       "vs_VGT_pct": 0.01335745588124082,
+       "vs_own_etf_pct": 0.03737748427518239
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 59800.0,
+       "final_value": 71065.25951292456,
+       "gain": 11265.25951292456,
+       "annual_return": 0.4043924969561994,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04383824822017157,
+       "vs_VGT_pct": 0.019668623622574488,
+       "vs_own_etf_pct": 0.04383824822017157
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 59800.0,
+       "final_value": 70263.69585592103,
+       "gain": 10463.695855921032,
+       "annual_return": 0.37416507907565305,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.032064523487465246,
+       "vs_VGT_pct": 0.008167514409935794,
+       "vs_own_etf_pct": 0.032064523487465246
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 59800.0,
+       "final_value": 70243.33082680104,
+       "gain": 10443.330826801044,
+       "annual_return": 0.37339985633486356,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.031765392850818586,
+       "vs_VGT_pct": 0.00787531001421371,
+       "vs_own_etf_pct": 0.031765392850818586
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 59800.0,
+       "final_value": 69956.85807062492,
+       "gain": 10156.85807062492,
+       "annual_return": 0.3626500855774152,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.027557553155034276,
+       "vs_VGT_pct": 0.003764901032419221,
+       "vs_own_etf_pct": 0.027557553155034276
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 59800.0,
+       "final_value": 68813.43402335572,
+       "gain": 9013.434023355716,
+       "annual_return": 0.3200158704934792,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.010762430437481596,
+       "vs_VGT_pct": -0.012641337859650048,
+       "vs_own_etf_pct": 0.010762430437481596
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 59800.0,
+       "final_value": 68486.31546542038,
+       "gain": 8686.315465420383,
+       "annual_return": 0.30789957562067694,
+       "cash_from_buyouts": 17.38501198382115,
+       "vs_QQQ_pct": 0.0059575670651972334,
+       "vs_VGT_pct": -0.01733494669211566,
+       "vs_own_etf_pct": 0.0059575670651972334
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 59800.0,
+       "final_value": 70083.04305682813,
+       "gain": 10283.04305682813,
+       "annual_return": 0.3673817764536197,
+       "cash_from_buyouts": 32.94903755037845,
+       "vs_QQQ_pct": 0.029411014548868852,
+       "vs_VGT_pct": 0.005575446326780087,
+       "vs_own_etf_pct": 0.005575446326780087
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 59800.0,
+       "final_value": 74828.58250562806,
+       "gain": 15028.58250562806,
+       "annual_return": 0.549076511824867,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.09911561591170681,
+       "vs_VGT_pct": 0.0736660676974712,
+       "vs_own_etf_pct": 0.0736660676974712
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 59800.0,
+       "final_value": 71945.13974732545,
+       "gain": 12145.139747325447,
+       "annual_return": 0.43781475568898315,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05676232179445484,
+       "vs_VGT_pct": 0.032293445845324564,
+       "vs_own_etf_pct": 0.032293445845324564
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 59800.0,
+       "final_value": 72112.66821765693,
+       "gain": 12312.66821765693,
+       "annual_return": 0.4442067197809306,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.059223054734802716,
+       "vs_VGT_pct": 0.03469720157535794,
+       "vs_own_etf_pct": 0.03469720157535794
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 59800.0,
+       "final_value": 72143.3336361213,
+       "gain": 12343.3336361213,
+       "annual_return": 0.4453777218567368,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05967348208721335,
+       "vs_VGT_pct": 0.03513719947662053,
+       "vs_own_etf_pct": 0.03513719947662053
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 59800.0,
+       "final_value": 71727.6799690226,
+       "gain": 11927.679969022603,
+       "annual_return": 0.42953119300803494,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05356817551823245,
+       "vs_VGT_pct": 0.029173258649005218,
+       "vs_own_etf_pct": 0.029173258649005218
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 59800.0,
+       "final_value": 70851.74777518708,
+       "gain": 11051.747775187076,
+       "annual_return": 0.3963202503580129,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04070209252578749,
+       "vs_VGT_pct": 0.016605084261173353,
+       "vs_own_etf_pct": 0.016605084261173353
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 59800.0,
+       "final_value": 70600.23720808285,
+       "gain": 10800.23720808285,
+       "annual_return": 0.38683053798620476,
+       "cash_from_buyouts": 10.07670501749959,
+       "vs_QQQ_pct": 0.03700779306675028,
+       "vs_VGT_pct": 0.012996324713351548,
+       "vs_own_etf_pct": 0.012996324713351548
+      }
+     ]
+    },
+    "2022": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 68769.99999999999,
+       "final_value": 59769.914960269074,
+       "gain": -9000.085039730911,
+       "annual_return": -0.2524186516971755,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.028298317413367524,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 68769.99999999999,
+       "final_value": 61510.56032049246,
+       "gain": -7259.439679507523,
+       "annual_return": -0.20560716807077695,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02912243327400499,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 68769.99999999999,
+       "final_value": 68769.99999999999,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 68769.99999999999,
+       "final_value": 60017.38624294686,
+       "gain": -8752.613757053128,
+       "annual_return": -0.24582474004104515,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.004140398774906906,
+       "vs_VGT_pct": -0.02427508495721098,
+       "vs_own_etf_pct": 0.004140398774906906
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 68769.99999999999,
+       "final_value": 54001.09599321124,
+       "gain": -14768.904006788747,
+       "annual_return": -0.4001240835258369,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.09651710180435336,
+       "vs_VGT_pct": -0.12208414763504305,
+       "vs_own_etf_pct": -0.09651710180435336
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 68769.99999999999,
+       "final_value": 54785.625224171396,
+       "gain": -13984.37477582859,
+       "annual_return": -0.38073343771859397,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.08339128036924415,
+       "vs_VGT_pct": -0.1093297648612157,
+       "vs_own_etf_pct": -0.08339128036924415
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 68769.99999999999,
+       "final_value": 56092.90123708597,
+       "gain": -12677.098762914015,
+       "annual_return": -0.3479252793861512,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.06151947389631274,
+       "vs_VGT_pct": -0.08807689371025906,
+       "vs_own_etf_pct": -0.06151947389631274
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 68769.99999999999,
+       "final_value": 56659.56520922891,
+       "gain": -12110.434790771076,
+       "annual_return": -0.3335137869133913,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.052038718025744446,
+       "vs_VGT_pct": -0.07886442727863474,
+       "vs_own_etf_pct": -0.052038718025744446
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 68770.0,
+       "final_value": 57368.0081272416,
+       "gain": -11401.9918727584,
+       "annual_return": -0.31533710754063704,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.040185883393411226,
+       "vs_VGT_pct": -0.06734700792297543,
+       "vs_own_etf_pct": -0.040185883393411226
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 68770.0,
+       "final_value": 59191.87508293851,
+       "gain": -9578.12491706149,
+       "annual_return": -0.2677403733225901,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.009671084151864795,
+       "vs_VGT_pct": -0.03769572615617156,
+       "vs_own_etf_pct": -0.009671084151864795
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 68769.99999999999,
+       "final_value": 59772.02622251252,
+       "gain": -8997.973777487467,
+       "annual_return": -0.25236248361940533,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 3.532315956689125e-05,
+       "vs_VGT_pct": -0.028263993839782064,
+       "vs_own_etf_pct": 3.532315956689125e-05
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 68769.99999999999,
+       "final_value": 61366.69721293097,
+       "gain": -7403.302787069013,
+       "annual_return": -0.20951398952803146,
+       "cash_from_buyouts": 131.8504521107929,
+       "vs_QQQ_pct": 0.026715484767266817,
+       "vs_VGT_pct": -0.0023388359138969417,
+       "vs_own_etf_pct": -0.0023388359138969417
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 68769.99999999999,
+       "final_value": 60623.85357660989,
+       "gain": -8146.146423390099,
+       "annual_return": -0.2295788964348094,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.014287097729827059,
+       "vs_VGT_pct": -0.014415520510015045,
+       "vs_own_etf_pct": -0.014415520510015045
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 68769.99999999999,
+       "final_value": 61019.23465364118,
+       "gain": -7750.765346358807,
+       "annual_return": -0.2189218938581772,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.020902149420867877,
+       "vs_VGT_pct": -0.007987663651433108,
+       "vs_own_etf_pct": -0.007987663651433108
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 68770.0,
+       "final_value": 60806.06531393952,
+       "gain": -7963.934686060478,
+       "annual_return": -0.22467401922105415,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.017335650458248253,
+       "vs_VGT_pct": -0.011453236694354052,
+       "vs_own_etf_pct": -0.011453236694354052
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 68769.99999999999,
+       "final_value": 61005.332938475134,
+       "gain": -7764.667061524851,
+       "annual_return": -0.21929747178804218,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02066956225430938,
+       "vs_VGT_pct": -0.008213668992525958,
+       "vs_own_etf_pct": -0.008213668992525958
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 68769.99999999999,
+       "final_value": 61106.03521046104,
+       "gain": -7663.964789538943,
+       "annual_return": -0.21657539474822188,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.022354394365127206,
+       "vs_VGT_pct": -0.006576514795568422,
+       "vs_own_etf_pct": -0.006576514795568422
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 68769.99999999999,
+       "final_value": 61254.842869239066,
+       "gain": -7515.157130760919,
+       "annual_return": -0.21254688385774084,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02484406929400973,
+       "vs_VGT_pct": -0.004157293478079471,
+       "vs_own_etf_pct": -0.004157293478079471
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 68770.0,
+       "final_value": 61215.30641137589,
+       "gain": -7554.693588624112,
+       "annual_return": -0.21361792117242237,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.024182591728089564,
+       "vs_VGT_pct": -0.004800052341877414,
+       "vs_own_etf_pct": -0.004800052341877414
+      }
+     ]
+    },
+    "2023": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 79085.49999999999,
+       "final_value": 95441.77881088432,
+       "gain": 16356.278810884338,
+       "annual_return": 0.4463082731385417,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": 0.002980649917184053,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 79085.49999999999,
+       "final_value": 95158.14569180865,
+       "gain": 16072.645691808662,
+       "annual_return": 0.43812319898051233,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": -0.0029717920454698232,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 79085.49999999999,
+       "final_value": 79085.49999999999,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 79085.5,
+       "final_value": 95707.51229562958,
+       "gain": 16622.01229562958,
+       "annual_return": 0.45399022102796704,
+       "cash_from_buyouts": 511.9734567856567,
+       "vs_QQQ_pct": 0.0027842469834076233,
+       "vs_VGT_pct": 0.005773195766132222,
+       "vs_own_etf_pct": 0.0027842469834076233
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 79085.49999999999,
+       "final_value": 97725.25339119049,
+       "gain": 18639.753391190505,
+       "annual_return": 0.5127398376011036,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.023925314560941047,
+       "vs_VGT_pct": 0.02697727746498968,
+       "vs_own_etf_pct": 0.023925314560941047
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 79085.49999999997,
+       "final_value": 98950.25808420427,
+       "gain": 19864.758084204295,
+       "annual_return": 0.5487653202081131,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03676041369966421,
+       "vs_VGT_pct": 0.039850633540897684,
+       "vs_own_etf_pct": 0.03676041369966421
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 79085.5,
+       "final_value": 98020.02831799147,
+       "gain": 18934.52831799147,
+       "annual_return": 0.5213842204766332,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.027013845919781954,
+       "vs_VGT_pct": 0.030075014654569632,
+       "vs_own_etf_pct": 0.027013845919781954
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 79085.5,
+       "final_value": 97921.67996846382,
+       "gain": 18836.179968463824,
+       "annual_return": 0.5184983877023778,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.025983392058244847,
+       "vs_VGT_pct": 0.02904148937081552,
+       "vs_own_etf_pct": 0.025983392058244847
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 79085.49999999999,
+       "final_value": 97865.75127576587,
+       "gain": 18780.251275765884,
+       "annual_return": 0.5168580466259629,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.025397394045689303,
+       "vs_VGT_pct": 0.028453744703332173,
+       "vs_own_etf_pct": 0.025397394045689303
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 79085.5,
+       "final_value": 96685.91306239225,
+       "gain": 17600.413062392254,
+       "annual_return": 0.4823855992483602,
+       "cash_from_buyouts": 291.7513126973958,
+       "vs_QQQ_pct": 0.013035530844130117,
+       "vs_VGT_pct": 0.016055035115245087,
+       "vs_own_etf_pct": 0.013035530844130117
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 79085.49999999999,
+       "final_value": 96028.72821647362,
+       "gain": 16943.22821647364,
+       "annual_return": 0.46329336116156294,
+       "cash_from_buyouts": 478.67729296495656,
+       "vs_QQQ_pct": 0.0061498162848820925,
+       "vs_VGT_pct": 0.009148796651466506,
+       "vs_own_etf_pct": 0.0061498162848820925
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 79085.49999999999,
+       "final_value": 95777.15147756856,
+       "gain": 16691.65147756858,
+       "annual_return": 0.45600552551828544,
+       "cash_from_buyouts": 116.8105414032465,
+       "vs_QQQ_pct": 0.0035138979057460773,
+       "vs_VGT_pct": 0.00650502152243182,
+       "vs_own_etf_pct": 0.00650502152243182
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 79085.5,
+       "final_value": 95913.25874227323,
+       "gain": 16827.758742273232,
+       "annual_return": 0.4599469299637959,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.004939974267696101,
+       "vs_VGT_pct": 0.00793534851877209,
+       "vs_own_etf_pct": 0.00793534851877209
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 79085.5,
+       "final_value": 96250.2482569534,
+       "gain": 17164.748256953404,
+       "annual_return": 0.46972007109871283,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.008470812846762321,
+       "vs_VGT_pct": 0.011476711291556363,
+       "vs_own_etf_pct": 0.011476711291556363
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 79085.49999999999,
+       "final_value": 96533.39715740083,
+       "gain": 17447.897157400846,
+       "annual_return": 0.4779477719379694,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.01143753144709847,
+       "vs_VGT_pct": 0.014452272641443109,
+       "vs_own_etf_pct": 0.014452272641443109
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 79085.49999999999,
+       "final_value": 96728.3187371265,
+       "gain": 17642.81873712651,
+       "annual_return": 0.4836202475215162,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.01347984019442272,
+       "vs_VGT_pct": 0.016500668796165963,
+       "vs_own_etf_pct": 0.016500668796165963
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 79085.49999999999,
+       "final_value": 96620.0579767538,
+       "gain": 17534.557976753815,
+       "annual_return": 0.4804688644680832,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.012345528138198336,
+       "vs_VGT_pct": 0.015362975752805097,
+       "vs_own_etf_pct": 0.015362975752805097
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 79085.5,
+       "final_value": 96284.24917618111,
+       "gain": 17198.74917618111,
+       "annual_return": 0.4707072936882949,
+       "cash_from_buyouts": 71.73598875546276,
+       "vs_QQQ_pct": 0.008827060599594594,
+       "vs_VGT_pct": 0.011834020894223807,
+       "vs_own_etf_pct": 0.011834020894223807
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 79085.49999999999,
+       "final_value": 96107.16965014485,
+       "gain": 17021.66965014486,
+       "annual_return": 0.46556806926809696,
+       "cash_from_buyouts": 119.36175965186017,
+       "vs_QQQ_pct": 0.006971693607879859,
+       "vs_VGT_pct": 0.009973123703038711,
+       "vs_own_etf_pct": 0.009973123703038711
+      }
+     ]
+    },
+    "2024": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 90948.32499999998,
+       "final_value": 101081.23675404357,
+       "gain": 10132.911754043584,
+       "annual_return": 0.22837994770642348,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.01830657597820129,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 90948.32499999998,
+       "final_value": 102966.19523021174,
+       "gain": 12017.87023021176,
+       "annual_return": 0.27250796154183143,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0186479562053119,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 90948.32499999997,
+       "final_value": 90948.32499999997,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 90948.32499999998,
+       "final_value": 101724.54012375808,
+       "gain": 10776.215123758098,
+       "annual_return": 0.24338421055590775,
+       "cash_from_buyouts": 39.09403937939326,
+       "vs_QQQ_pct": 0.006364221396299552,
+       "vs_VGT_pct": -0.01205886168443504,
+       "vs_own_etf_pct": 0.006364221396299552
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 90948.32499999997,
+       "final_value": 109201.33059561654,
+       "gain": 18253.005595616574,
+       "annual_return": 0.421931596159481,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.08033235546307416,
+       "vs_VGT_pct": 0.060555169116080165,
+       "vs_own_etf_pct": 0.08033235546307416
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 90948.32499999998,
+       "final_value": 113468.90880089872,
+       "gain": 22520.583800898734,
+       "annual_return": 0.5271436541457932,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.1225516470183039,
+       "vs_VGT_pct": 0.10200157000270837,
+       "vs_own_etf_pct": 0.1225516470183039
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 90948.32499999998,
+       "final_value": 109951.61340668438,
+       "gain": 19003.288406684398,
+       "annual_return": 0.440259572796014,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.08775492799147977,
+       "vs_VGT_pct": 0.06784185975654089,
+       "vs_own_etf_pct": 0.08775492799147977
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 90948.32499999998,
+       "final_value": 107752.29178626761,
+       "gain": 16803.96678626763,
+       "annual_return": 0.3867425130780143,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.06599696685999623,
+       "vs_VGT_pct": 0.0464822123936417,
+       "vs_own_etf_pct": 0.06599696685999623
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 90948.32499999998,
+       "final_value": 106422.4328717329,
+       "gain": 15474.107871732922,
+       "annual_return": 0.35469173655103015,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.05284062887641383,
+       "vs_VGT_pct": 0.03356672191095056,
+       "vs_own_etf_pct": 0.05284062887641383
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 90948.32499999998,
+       "final_value": 103225.92493593138,
+       "gain": 12277.599935931401,
+       "annual_return": 0.27862715043615677,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.021217470727098453,
+       "vs_VGT_pct": 0.0025224755089661155,
+       "vs_own_etf_pct": 0.021217470727098453
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 90948.32499999998,
+       "final_value": 102312.91730613643,
+       "gain": 11364.592306136445,
+       "annual_return": 0.25715817447073736,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.01218505621463506,
+       "vs_VGT_pct": -0.006344586420958032,
+       "vs_own_etf_pct": 0.01218505621463506
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 90948.32499999998,
+       "final_value": 102788.45793468012,
+       "gain": 11840.132934680136,
+       "annual_return": 0.26832588003345126,
+       "cash_from_buyouts": 45.29031116362151,
+       "vs_QQQ_pct": 0.01688959529443279,
+       "vs_VGT_pct": -0.0017261713432670245,
+       "vs_own_etf_pct": -0.0017261713432670245
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 90948.32499999998,
+       "final_value": 107820.15364896263,
+       "gain": 16871.828648962648,
+       "annual_return": 0.38838433634357666,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.06666832649976939,
+       "vs_VGT_pct": 0.04714128173716059,
+       "vs_own_etf_pct": 0.04714128173716059
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 90948.32499999998,
+       "final_value": 105541.01784590221,
+       "gain": 14592.692845902231,
+       "annual_return": 0.333579094471541,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04412076103412188,
+       "vs_VGT_pct": 0.025006484991833444,
+       "vs_own_etf_pct": 0.025006484991833444
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 90948.32499999998,
+       "final_value": 104413.87159881406,
+       "gain": 13465.546598814079,
+       "annual_return": 0.3067333335390187,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03296986613726993,
+       "vs_VGT_pct": 0.014059724799635465,
+       "vs_own_etf_pct": 0.014059724799635465
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 90948.32499999997,
+       "final_value": 103368.56392832227,
+       "gain": 12420.238928322302,
+       "annual_return": 0.28199166494047195,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02262860297054292,
+       "vs_VGT_pct": 0.003907774752780924,
+       "vs_own_etf_pct": 0.003907774752780924
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 90948.32499999998,
+       "final_value": 103016.49270224222,
+       "gain": 12068.167702242237,
+       "annual_return": 0.2736922333734891,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.019145550750508056,
+       "vs_VGT_pct": 0.0004884852928479511,
+       "vs_own_etf_pct": 0.0004884852928479511
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 90948.32499999998,
+       "final_value": 102864.35350921807,
+       "gain": 11916.028509218086,
+       "annual_return": 0.27011113457316455,
+       "cash_from_buyouts": 5.296022676094329,
+       "vs_QQQ_pct": 0.01764043270971527,
+       "vs_VGT_pct": -0.0009890791901747686,
+       "vs_own_etf_pct": -0.0009890791901747686
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 90948.32499999998,
+       "final_value": 102740.81395045259,
+       "gain": 11792.488950452607,
+       "annual_return": 0.2672055818891093,
+       "cash_from_buyouts": 50.6804033728083,
+       "vs_QQQ_pct": 0.016418251791350702,
+       "vs_VGT_pct": -0.0021888861606981225,
+       "vs_own_etf_pct": -0.0021888861606981225
+      }
+     ]
+    },
+    "2025": {
+     "benchmarks": [
+      {
+       "portfolio": "All in QQQ",
+       "invested": 106601.9309375,
+       "final_value": 120476.0108924127,
+       "gain": 13874.079954912697,
+       "annual_return": 0.2719833794377949,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0,
+       "vs_VGT_pct": -0.020591823783334462,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "All in VGT",
+       "invested": 106601.9309375,
+       "final_value": 123008.99034537046,
+       "gain": 16407.05940787046,
+       "annual_return": 0.32385114020980005,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.021024761977052497,
+       "vs_VGT_pct": 0.0,
+       "vs_own_etf_pct": 0.0
+      },
+      {
+       "portfolio": "Cash (kept, no interest)",
+       "invested": 106601.93093749996,
+       "final_value": 106601.93093749996,
+       "gain": 0.0,
+       "annual_return": 0.0,
+       "cash_from_buyouts": 0.0
+      }
+     ],
+     "QQQ": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 106601.93093749997,
+       "final_value": 120858.39275071486,
+       "gain": 14256.46181321489,
+       "annual_return": 0.2797714515616702,
+       "cash_from_buyouts": 64.69127592128704,
+       "vs_QQQ_pct": 0.003173925294087221,
+       "vs_VGT_pct": -0.01748325539960449,
+       "vs_own_etf_pct": 0.003173925294087221
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 106601.93093749997,
+       "final_value": 124264.36787525915,
+       "gain": 17662.43693775918,
+       "annual_return": 0.3497977614492718,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03144490720421955,
+       "vs_VGT_pct": 0.010205575432852498,
+       "vs_own_etf_pct": 0.03144490720421955
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 106601.93093749997,
+       "final_value": 123710.74122872864,
+       "gain": 17108.81029122867,
+       "annual_return": 0.3383357447429974,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.026849580363385472,
+       "vs_VGT_pct": 0.0057048747525516585,
+       "vs_own_etf_pct": 0.026849580363385472
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 106601.93093749997,
+       "final_value": 123507.90247151545,
+       "gain": 16905.97153401548,
+       "annual_return": 0.3341439408511387,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02516593599542638,
+       "vs_VGT_pct": 0.004055899692731346,
+       "vs_own_etf_pct": 0.02516593599542638
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 106601.93093749996,
+       "final_value": 122682.18854166777,
+       "gain": 16080.257604167811,
+       "annual_return": 0.31712263697846665,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.0183121737922185,
+       "vs_VGT_pct": -0.0026567310469352012,
+       "vs_own_etf_pct": 0.0183121737922185
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 106601.93093749997,
+       "final_value": 122628.17262829475,
+       "gain": 16026.241690794777,
+       "annual_return": 0.3160115440765001,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.017863819692735206,
+       "vs_VGT_pct": -0.003095852717809433,
+       "vs_own_etf_pct": 0.017863819692735206
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 106601.93093749997,
+       "final_value": 122601.12252225295,
+       "gain": 15999.191584752974,
+       "annual_return": 0.3154552413612692,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.017639292786163052,
+       "vs_VGT_pct": -0.003315756205886644,
+       "vs_own_etf_pct": 0.017639292786163052
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 106601.93093749996,
+       "final_value": 121260.3247868231,
+       "gain": 14658.39384932314,
+       "annual_return": 0.2879738697100351,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.006510125033196923,
+       "vs_VGT_pct": -0.014215754097628652,
+       "vs_own_etf_pct": 0.006510125033196923
+      }
+     ],
+     "VGT": [
+      {
+       "portfolio": "All holdings (check)",
+       "invested": 106601.93093749997,
+       "final_value": 123432.31376333759,
+       "gain": 16830.382825837616,
+       "annual_return": 0.3325829022852117,
+       "cash_from_buyouts": 161.4389580584567,
+       "vs_QQQ_pct": 0.02453851890535219,
+       "vs_VGT_pct": 0.003441402264814597,
+       "vs_own_etf_pct": 0.003441402264814597
+      },
+      {
+       "portfolio": "Top 5",
+       "invested": 106601.93093749997,
+       "final_value": 124521.69862078146,
+       "gain": 17919.76768328149,
+       "annual_return": 0.3551358152791153,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03358085728769389,
+       "vs_VGT_pct": 0.012297542408597817,
+       "vs_own_etf_pct": 0.012297542408597817
+      },
+      {
+       "portfolio": "Top 10",
+       "invested": 106601.93093749996,
+       "final_value": 123952.3479234207,
+       "gain": 17350.416985920747,
+       "annual_return": 0.34333408806370597,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.028855014415379632,
+       "vs_VGT_pct": 0.007669013259938184,
+       "vs_own_etf_pct": 0.007669013259938184
+      },
+      {
+       "portfolio": "Top 15",
+       "invested": 106601.93093749997,
+       "final_value": 123214.86021392397,
+       "gain": 16612.929276423994,
+       "annual_return": 0.32809530514330937,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.02273356580470698,
+       "vs_VGT_pct": 0.0016736164403552412,
+       "vs_own_etf_pct": 0.0016736164403552412
+      },
+      {
+       "portfolio": "Top 20",
+       "invested": 106601.93093749997,
+       "final_value": 124122.36308023156,
+       "gain": 17520.432142731588,
+       "annual_return": 0.3468548460619732,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.03026620952012693,
+       "vs_VGT_pct": 0.009051149283764603,
+       "vs_own_etf_pct": 0.009051149283764603
+      },
+      {
+       "portfolio": "Top 25",
+       "invested": 106601.93093749997,
+       "final_value": 125427.32775947775,
+       "gain": 18825.396821977774,
+       "annual_return": 0.3739743862944288,
+       "cash_from_buyouts": 0.0,
+       "vs_QQQ_pct": 0.04109794830015301,
+       "vs_VGT_pct": 0.019659842807565164,
+       "vs_own_etf_pct": 0.019659842807565164
+      },
+      {
+       "portfolio": "Top 50",
+       "invested": 106601.93093749997,
+       "final_value": 124193.94149767094,
+       "gain": 17592.010560170966,
+       "annual_return": 0.348337989981139,
+       "cash_from_buyouts": 74.78274109246198,
+       "vs_QQQ_pct": 0.03086033956235834,
+       "vs_VGT_pct": 0.009633045104861848,
+       "vs_own_etf_pct": 0.009633045104861848
+      },
+      {
+       "portfolio": "Top 75",
+       "invested": 106601.93093749997,
+       "final_value": 123674.41575079419,
+       "gain": 17072.484813294213,
+       "annual_return": 0.33758475059944754,
+       "cash_from_buyouts": 103.98512501440361,
+       "vs_QQQ_pct": 0.026548064089187973,
+       "vs_VGT_pct": 0.005409567248340297,
+       "vs_own_etf_pct": 0.005409567248340297
+      }
+     ]
+    }
+   }
+  }
+ },
+ "dropped_weight_by_snapshot": {
+  "QQQ": {
+   "2019-12-31": 0.0,
+   "2020-03-31": -2.220446049250313e-16,
+   "2020-06-30": 2.220446049250313e-16,
+   "2020-09-30": 0.0,
+   "2020-12-31": 1.1102230246251565e-16,
+   "2021-03-31": 0.0,
+   "2021-06-30": 0.005043640515335457,
+   "2021-09-30": 0.0,
+   "2021-12-31": 0.003485871837434207,
+   "2022-03-31": 1.1102230246251565e-16,
+   "2022-06-30": -2.220446049250313e-16,
+   "2022-09-30": -2.220446049250313e-16,
+   "2022-12-31": 0.0,
+   "2023-03-31": 0.0,
+   "2023-06-30": 0.0,
+   "2023-09-30": 0.0034518146860852417,
+   "2023-12-31": 0.002041639344037338,
+   "2024-03-31": 2.220446049250313e-16,
+   "2024-06-30": 0.0,
+   "2024-09-30": 0.0016067511399164847,
+   "2024-12-31": 3.3306690738754696e-16,
+   "2025-03-31": 1.1102230246251565e-16,
+   "2025-06-30": 0.0018068356509616246,
+   "2025-09-30": 1.1102230246251565e-16,
+   "2025-12-31": 0.0
+  },
+  "VGT": {
+   "2019-11-30": 0.008947673573512116,
+   "2020-02-29": 0.008123184124866012,
+   "2020-05-31": 0.007048617621846276,
+   "2020-08-31": 0.006117545479169539,
+   "2020-11-30": 0.007120948211979172,
+   "2021-02-28": 0.008135304344558447,
+   "2021-05-31": 0.006611399117715133,
+   "2021-08-31": 0.0033711861705776336,
+   "2021-11-30": 0.007536178741234134,
+   "2022-02-28": 0.00488100128165847,
+   "2022-05-31": 0.003289868933562312,
+   "2022-08-31": 0.004192353161477369,
+   "2022-11-30": 0.0026744383307858444,
+   "2023-02-28": 0.0029765639167758096,
+   "2023-05-31": 0.0017230436427002616,
+   "2023-08-31": 0.0032352497717353934,
+   "2023-11-30": 0.003185939083073075,
+   "2024-02-29": 0.0050207134551462085,
+   "2024-05-31": 0.0032720794609403248,
+   "2024-08-31": 0.002564915403468482,
+   "2024-11-30": 0.0038645374072601157,
+   "2025-02-28": 0.0040763036082487325,
+   "2025-05-31": 0.0047201636728955165,
+   "2025-08-31": 0.0012358232471368913,
+   "2025-11-30": 0.0012512632130292634
+  }
+ }
+}
